@@ -1,0 +1,64 @@
+
+
+.header {
+  --header-background-color: rgba(15, 15, 15, 0.8);
+  --header-transition-background-color: transition: background-color 0.5s;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: var(--astro-z-index-nav, 100);
+  width: 100%;
+  transition: background-color 0.5s;
+}
+
+.header .navBar {
+  position: relative;
+  height: var(--astro-nav-height, 4rem);
+  white-space: nowrap;
+  transition: var(--header-transition-background-color);
+}
+
+.header .navBar .wrapper {
+  padding: 0 8px 0 24px;
+}
+.header .navBar .wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: calc(var(--astro-layout-max-width) - 64px);
+  height: var(--astro-nav-height, 4rem);
+}
+.header .navBar .wrapper *:not(.wrapper *){ 
+  transition: none;
+}
+
+@media (min-width: 768px) {
+  .header .navBar {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: var(--header-background-color);
+    border-bottom: 1px solid #262626 !important;
+  }
+  .header .navBar .wrapper { 
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 960px) {
+  .header {
+    position: fixed;
+  }
+}
+
+.header .navBar .wrapper .container .content {
+  flex-grow: 1;
+}
+.header .navBar .wrapper .container .content .contentBody {
+  background: none;
+  transition: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--astro-nav-height);
+}

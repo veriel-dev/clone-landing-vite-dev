@@ -1,0 +1,288 @@
+*,:before,:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+@media (prefers-reduced-motion: reduce) {
+  *,:before,:after {
+      animation-delay: -1ms!important;
+      animation-duration: 1ms!important;
+      animation-iteration-count: 1!important;
+      background-attachment: initial!important;
+      scroll-behavior: auto!important;
+      transition-duration: 0s!important;
+      transition-delay: 0s!important;
+  }
+}
+
+html {
+  line-height: 1.4;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+html.dark {
+  color-scheme: dark;
+}
+html:has(.landing) {
+  --vp-c-bg: #101010;
+
+  background-color: #101010;
+
+  body {
+    background-color: #101010;
+  }
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 24px;
+  font-family: var(--astro-font-family-base);
+  font-size: 16px;
+  background-color: var(--astro-c-bg);
+  font-synthesis: style;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.landing {
+  overflow-x: hidden;
+  background-color: #101010;
+}
+.landing * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+/*  Globlas Class Landing */
+.landing h1 {
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  background: linear-gradient(180deg, #fff, #ffffff4f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-wrap: balance;
+  cursor: default;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -.88px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+
+.landing h3 {
+  color: #a9a9a9;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -.4px;
+  max-width: 500px;
+  text-wrap: balance;
+  cursor: default;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.landing .btn {
+  display: flex;
+  padding: 10px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .2);
+  transition: all .2s ease-in-out;
+  width: fit-content;
+}
+.landing .btn.btn--primary {
+  position: relative;
+  background: radial-gradient(141.42% 141.42% at 100% 0%, #fff6, #fff0), radial-gradient(140.35% 140.35% at 100% 94.74%, #bd34fe, #bd34fe00), radial-gradient(89.94% 89.94% at 18.42% 15.79%, #41d1ff, #41d1ff00);
+  box-shadow: 0 1px #ffffffbf inset;
+}
+.landing .btn.btn--primary:hover {
+  background: radial-gradient(141.42% 141.42% at 100% 0%, #ffffff80, #fff0), radial-gradient(140.35% 140.35% at 100% 94.74%, #bd34fe, #bd34fe00), radial-gradient(89.94% 89.94% at 18.42% 15.79%, #41d1ff, #41d1ff00);
+  box-shadow: 0 1.5px #fffc inset;
+}
+.landing .btn:hover {
+  transform: translate3d(0, -2px, 0);
+}
+
+.landing .btn.btn--outline {
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+.landing .btn.btn--outline:hover {
+  border: 1px solid rgba(255, 255, 255, .4);
+}
+
+@media (min-width: 768px) {
+  .landing h1 {
+      font-size: 64px;
+      line-height: 81px;
+      letter-spacing: -1.28px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .landing h1 {
+      font-size: 72px;
+      letter-spacing: -1.44px;
+      padding-bottom: 8px;
+  }
+}
+
+main {
+  display: bloxk;
+}
+strong, b {
+  font-weigth: 600;
+}
+a,area,button,[role=button],input,label,select,summary,textarea {
+  touch-action: manipulation
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+
+ol,ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+blockquote {
+  margin: 0
+}
+
+pre,code,kbd,samp {
+  font-family: var(--astro-font-family-base)
+}
+
+img,svg,video,canvas,audio,iframe,embed,object {
+  display: block
+}
+
+figure {
+  margin: 0
+}
+
+img,video {
+  max-width: 100%;
+  height: auto
+}
+
+button,input,optgroup,select,textarea {
+  border: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit
+}
+
+button {
+  padding: 0;
+  font-family: inherit;
+  background-color: transparent;
+  background-image: none
+}
+
+button:enabled,[role=button]:enabled {
+  cursor: pointer
+}
+
+button:focus,button:focus-visible {
+  outline: 1px dotted;
+  outline: 4px auto -webkit-focus-ring-color
+}
+
+button:focus:not(:focus-visible) {
+  outline: none!important
+}
+
+input:focus,textarea:focus,select:focus {
+  outline: none
+}
+
+table {
+  border-collapse: collapse
+}
+
+input {
+  background-color: transparent
+}
+
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {
+  color: var(--astro-c-text-3)
+}
+
+input::-ms-input-placeholder,textarea::-ms-input-placeholder {
+  color: var(--astro-c-text-3)
+}
+
+input::placeholder,textarea::placeholder {
+  color: var(--astro-c-text-3)
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+input[type=number] {
+  -moz-appearance: textfield
+}
+
+textarea {
+  resize: vertical
+}
+
+select {
+  -webkit-appearance: none
+}
+
+fieldset {
+  margin: 0;
+  padding: 0
+}
+
+h1,h2,h3,h4,h5,h6,li,p {
+  overflow-wrap: break-word
+}
+button, input, optgroup, select, textarea {
+  border: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden
+}
+.home {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
