@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/css/globals.css"
 import "@/css/vars.css"
 import "@/css/heroDiagram.css"
+import "@/css/featureSection.css"
 import { Header } from "@/components";
 
 
@@ -34,7 +35,18 @@ export default function RootLayout({
       <body>
         <div className="layout landing dark">
           <Header />
-          {children}
+          {/* Main Content */}
+          <div className="content">
+            <div className="home">
+              <div style={{ position: "relative" }}>
+                <div>
+                  <div className="home">
+                    {children}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </body>
     </html>

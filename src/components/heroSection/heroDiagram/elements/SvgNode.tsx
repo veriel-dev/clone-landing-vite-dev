@@ -24,7 +24,6 @@ export const SvgNode = ({
   const pathElement = useRef<SVGPathElement | null>(null);
   const gradientWidthScaleFactorRef = useRef(visible ? 1 : 0);
   const dotRadiusRef = useRef(visible ? 3 : 0);
-  console.log({dotRadiusRef: dotRadiusRef.current})
   const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
   const pathId =  useId();
   

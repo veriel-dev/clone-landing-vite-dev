@@ -1,0 +1,195 @@
+.feature-card {
+  @media (min-width: 768px) {
+    transform: translate3d(-60px, 0, 0);
+  }
+
+  .feature__meta {
+    max-width: 680px;
+  }
+
+  /* Extend height on smaller devices, to make room for text */
+  @media (max-width: 330px) {
+    height: 400px;
+  }
+}
+
+.feature__visualization {
+  .diagram {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform-origin: center 40%;
+    transform: translate3d(-50%, 0, 0) scale(0.5);
+    margin-top: 0;
+
+    @media (min-width: 480px) {
+      transform-origin: center center;
+      transform: translate3d(-50%, 0, 0) scale(0.7);
+    }
+
+    @media (min-width: 630px) {
+      transform: translate3d(-50%, 0, 0) scale(1);
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      transform: translate3d(-50%, 0, 0) scale(0.6);
+      margin-top: 0;
+    }
+
+    @media (min-width: 1000px) {
+      transform: translate3d(-50%, 0, 0) scale(0.8);
+      margin-top: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      transform: translate3d(-50%, 0, 0) scale(1);
+    }
+  }
+
+  .blue-chip__cube,
+  .pink-chip__cube {
+    transition:
+      transform 0.5s ease-in-out,
+      filter 0.05s ease 0.45s;
+    will-change: filter, transform;
+
+    @media (min-width: 768px) {
+      transform: translate3d(0, -60px, 0);
+    }
+  }
+
+  .blue-chip__cube {
+    filter: grayscale(1) brightness(0.15)
+      drop-shadow(0 0 0rem color-mix(in srgb, #40cffd 0%, transparent));
+  }
+
+  .pink-chip__cube {
+    filter: grayscale(1) brightness(0.15)
+      drop-shadow(0 0 0rem color-mix(in srgb, #bc33fc 0%, transparent));
+  }
+
+  .vite-chip__logo {
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    will-change: filter, transform;
+    filter: grayscale(1) brightness(0.4)
+      drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.1));
+    transform: translate3d(0, 0, 0);
+  }
+
+  .vite-chip__v {
+    filter: drop-shadow(0 0 0rem color-mix(in srgb, #93bfff 0%, transparent));
+    will-change: filter;
+    transition-delay: 0.8s;
+  }
+
+  .blue-chip__connection {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    will-change: clip-path;
+    filter: drop-shadow(
+      0 0 0.2rem color-mix(in srgb, #40cffd 50%, transparent)
+    );
+    transition: all 0.6s ease-in-out;
+  }
+
+  .pink-chip__connection {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    will-change: clip-path;
+    filter: drop-shadow(
+      0 0 0.2rem color-mix(in srgb, #bc33fc 50%, transparent)
+    );
+    transition: all 0.6s ease-in-out;
+  }
+
+  .blue-glow {
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    width: 100px;
+    height: 100px;
+    background: #41d1ff;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    will-change: opacity;
+  }
+
+  .pink-glow {
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    width: 100px;
+    height: 100px;
+    background: #bd34fe;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    will-change: opacity;
+  }
+
+  &.active {
+    .blue-chip__cube,
+    .pink-chip__cube {
+      transform: translate3d(0px, 0, 0);
+    }
+
+    .blue-chip__cube {
+      filter: grayscale(0) brightness(1)
+        drop-shadow(0 0 0.5rem color-mix(in srgb, #40cffd 100%, transparent));
+    }
+
+    .pink-chip__cube {
+      filter: grayscale(0) brightness(1)
+        drop-shadow(0 0 0.5rem color-mix(in srgb, #bc33fc 100%, transparent));
+    }
+
+    .blue-chip__connection {
+      transition-delay: 0.3s;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .pink-chip__connection {
+      transition-delay: 0.3s;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .vite-chip__logo {
+      filter: grayscale(0) brightness(1)
+        drop-shadow(0px 20px 4px rgba(0, 0, 0, 0.4));
+      transform: translate3d(0, -20px, 0);
+      transition-delay: 0.8s;
+    }
+
+    .vite-chip__v {
+      filter: drop-shadow(
+        0 0 0.3rem color-mix(in srgb, #93bfff 20%, transparent)
+      );
+    }
+
+    .vite-chip__bolt {
+      filter: drop-shadow(
+        0 0 0.5rem color-mix(in srgb, yellow 20%, transparent)
+      );
+    }
+
+    .blue-glow {
+      opacity: 0.8;
+    }
+
+    .pink-glow {
+      opacity: 0.8;
+    }
+
+    &:hover {
+      .blue-glow {
+        opacity: 1;
+      }
+
+      .pink-glow {
+        opacity: 1;
+      }
+    }
+  }
+}

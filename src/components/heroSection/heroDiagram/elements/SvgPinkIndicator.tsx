@@ -13,7 +13,7 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
         viewBox="0 0 141 67"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`pinkIndicator ${active && active}`}
+        className={`pink-indicator ${active && "active"}`}
       >
         <g opacity="0.2" filter="url(#filter0_d_1_8)">
           <path
@@ -207,7 +207,7 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
           </filter>
         </defs>
       </svg>
-      <div className={`pink-glow ${active && active}`} />
+      <div className={`pink-glow ${active && "active"}`} />
     </>
   )
 }

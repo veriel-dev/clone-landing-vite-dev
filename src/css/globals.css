@@ -53,6 +53,7 @@ body {
 }
 .landing {
   overflow-x: hidden;
+  overflow: hidden;
   background-color: #101010;
 }
 .landing * {
@@ -77,6 +78,26 @@ body {
   letter-spacing: -.88px;
   padding: 0 20px;
   margin-bottom: 15px;
+}
+.landing h2 {
+  display: block;
+  width: fit-content;
+  font-family: Manrope,sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -.64px;
+  cursor: default;
+  text-wrap: balance;
+  padding: 0 20px
+}
+
+@media (min-width: 768px) {
+  .landing h2 {
+      font-size:44px;
+      letter-spacing: -.88px
+  }
 }
 
 .landing h3 {
@@ -278,11 +299,36 @@ button, input, optgroup, select, textarea {
   height: 1px;
   white-space: nowrap;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  clipPath: inset(50%);
   overflow: hidden
 }
+/* CONTENT */
+.content {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 960px) {
+  .content {
+      padding-top: var(--astro-nav-height);
+  }
+}
+.content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: var(--astro-layout-top-height, 0px) auto 0;
+  width: 100%;
+}
+
 .home {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
+
+.home {
+  margin-bottom: 96px;
+  @media (min-width: 768px) {
+    margin-bottom: 128px;
+  }
+}
+
 
