@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-
 export function useSlideIn(initialX: number = 100) {
   gsap.registerPlugin(ScrollTrigger);
   const elementRef = useRef<HTMLDivElement>(null);

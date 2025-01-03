@@ -40,7 +40,6 @@ export const useCardAnimation = (
 
     if (timelineRef.current) timelineRef.current.kill();
 
-
     if (!animation) return;
 
     timelineRef.current = gsap.timeline({
@@ -59,8 +58,7 @@ export const useCardAnimation = (
     }
   };
   useEffect(() => {
-    if (typeof element === 'string')
-      elementRef.current = document.querySelector(element);
+    if (typeof element === 'string') elementRef.current = document.querySelector(element);
 
     // Set up ScrollTrigger for mobile devices
     /* 

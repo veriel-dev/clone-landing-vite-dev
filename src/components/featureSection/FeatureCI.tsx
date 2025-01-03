@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../../css/featureSection/featureCI.css';
 import { useCardAnimation, useSlideIn } from '@/hooks';
 import gsap from 'gsap';
@@ -7,65 +7,53 @@ import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
 
 export const FeatureCI = () => {
   const [glowPosition, setGlowPosition] = useState(0);
-  const [glowVisible, setGlowVisible] = useState(false);
-  const [checkmarks, setCheckmarks] = useState(Array(13).fill(false));
+  const [glowVisible, setGlowVisible] = useState(true);
+  const [checkmarks, setCheckmarks] = useState<Array<boolean>>(() => Array.from({ length: 13 }, () => false));
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const cardRef = useSlideIn();
   const { isCardActive, startAnimation } = useCardAnimation(
     cardRef,
     () => {
 
-      timelineRef.current = gsap.timeline({
-        defaults: {
-          ease: 'power2.inOut'
-        }
-      });
-      // Create a proxy object for smoother animation
-      const animationProxy = {
-        glowProgress: 0
-      };
+      timelineRef.current = gsap.timeline();
 
+      const glowProxy = { value: 0 };
 
-      setGlowPosition(0);
-      setGlowVisible(false);
-      // Step 1: Animate the glow position with better control
-      timelineRef.current
-        .to(animationProxy, {
+      timelineRef.current.to(
+        glowProxy,
+        {
+          value: 1,
           duration: 1.5,
-          glowProgress: 1,
           ease: 'power2.in',
           onUpdate: () => {
-            setGlowPosition(animationProxy.glowProgress);
+            setGlowPosition(glowProxy.value);
           }
-        }, 0)
-        // Step 2: Control glow visibility with precise timing
-        .call(() => setGlowVisible(true), [], 0.2)
-        .call(() => setGlowVisible(false), [], 1.1);
-
-      // Step 3: Create a separate sequence for checkmarks
-      // Using stagger for smoother animations
-      const checkmarkTimeline = gsap.timeline({
-        delay: 1.3
-      });
+        },
+        0
+      );
       checkmarks.forEach((_, index) => {
-        checkmarkTimeline.add(
-          gsap.timeline()
-            .call(() => {
-              setCheckmarks(prev => {
-                const newCheckmarks = [...prev];
-                newCheckmarks[index] = true;
-                return newCheckmarks;
-              });
-            }),
-          index * 0.2
+        timelineRef.current?.call(
+          () => {
+            setCheckmarks(prev => {
+              const newCheckmarks = [...prev];
+              newCheckmarks[index] = true;
+              return newCheckmarks;
+            });
+          },
+          [],
+          1.3 + index * 0.2
         );
       });
-      timelineRef.current.add(checkmarkTimeline);
-
-      return timelineRef.current;
     },
-    { once: true },
+    { once: true }
   );
+  useEffect(() => {
+    return () => {
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+      }
+    };
+  }, []);
   return (
     <div
       ref={cardRef}
@@ -216,6 +204,7 @@ export const FeatureCI = () => {
               path="M1.00048 136.779L231.212 68.7423C242.847 65.5523 250.195 59.0356 250.195 51.9076V20.323V1"
               position={glowPosition}
               visible={glowVisible}
+              dotColor={false}
               glowColor="#13B351"
             />
             <SvgNode
@@ -236,7 +225,7 @@ export const FeatureCI = () => {
               path="M719.001 125.219L496.078 68.7439C484.449 65.5528 477.106 59.0377 477.106 51.9119V20.323V1"
               position={glowPosition}
               visible={glowVisible}
-              dotColor={false}
+              dotColor={"#13B35"}
               glowColor="#13B351"
             />
             <SvgNode

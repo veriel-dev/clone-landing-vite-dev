@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -42,11 +42,11 @@ export const useAnimationHeroDiagram = () => {
       path,
     })),
   );
-  const updateInputLine = (index: number, updates: SvgNodeProps) => {
+  const updateInputLine = useCallback((index: number, updates: SvgNodeProps) => {
     setInputLines(prevLines =>
       prevLines.map((line, i) => (i === index ? { ...line, ...updates } : line)),
     );
-  };
+  }, []);
   const [outputLines, setOutPutLines] = useState([
     {
       position: 0,
@@ -67,11 +67,11 @@ export const useAnimationHeroDiagram = () => {
       label: '.js',
     },
   ]);
-  const updateOutputLine = (index: number, updates: SvgNodeProps) => {
+  const updateOutputLine = useCallback((index: number, updates: SvgNodeProps) => {
     setOutPutLines(prevoutput =>
       prevoutput.map((line, i) => (i === index ? { ...line, ...updates } : line)),
     );
-  };
+  }, []);
   // Animation functions
   const animateSingleInputDesktop = (inputLine: SvgNodeProps, index: number) => {
     const timeline = gsap.timeline();
