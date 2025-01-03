@@ -1,5 +1,4 @@
-
-import React from 'react'
+import React from 'react';
 interface BlueIndicatorProps {
   active: boolean;
 }
@@ -12,7 +11,7 @@ export const SvgBlueIndicator = ({ active }: BlueIndicatorProps) => {
         viewBox="0 0 142 82"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`blue-indicator ${active && "active"}`}
+        className={`blue-indicator ${active && 'active'}`}
       >
         <g opacity="0.2" filter="url(#filter0_d_1_2)">
           <path
@@ -129,21 +128,9 @@ export const SvgBlueIndicator = ({ active }: BlueIndicatorProps) => {
             <feOffset dy="2.30833" />
             <feGaussianBlur stdDeviation="2.30833" />
             <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_1_2"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_1_2"
-              result="shape"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape" />
           </filter>
           <filter
             id="filter1_i_1_2"
@@ -155,12 +142,7 @@ export const SvgBlueIndicator = ({ active }: BlueIndicatorProps) => {
             colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -170,10 +152,7 @@ export const SvgBlueIndicator = ({ active }: BlueIndicatorProps) => {
             <feOffset />
             <feGaussianBlur stdDeviation="2.30833" />
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0" />
             <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_2" />
           </filter>
           <filter
@@ -186,20 +165,12 @@ export const SvgBlueIndicator = ({ active }: BlueIndicatorProps) => {
             colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="8.80116"
-              result="effect1_foregroundBlur_1_2"
-            />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="8.80116" result="effect1_foregroundBlur_1_2" />
           </filter>
         </defs>
       </svg>
-      <div className={`blue-glow ${active && "active"}`} />
+      <div className={`blue-glow ${active && 'active'}`} />
     </>
-  )
-}
+  );
+};

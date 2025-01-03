@@ -7,7 +7,9 @@
   font-weight: 500;
   color: var(--astro-c-text-1);
   white-space: nowrap;
-  transition: background-color .25s, color .25s;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
 }
 
 .menu-link-lang:hover {
@@ -40,7 +42,7 @@
   border: 1px solid var(--astro-c-divider);
   background-color: var(--astro-c-bg-elv);
   box-shadow: var(--astro-shadow-3);
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   max-height: calc(100vh - var(--astro-nav-height));
   overflow-y: auto;
 }

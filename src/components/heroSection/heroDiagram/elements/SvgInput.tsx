@@ -1,12 +1,11 @@
-
-import React from 'react'
-import { SvgNode } from './SvgNode'
-import type { SvgNodeProps } from './SvgNode'
+import React from 'react';
+import { SvgNode } from './SvgNode';
+import type { SvgNodeProps } from './SvgNode';
 interface InputLinesProps {
-  inputLines: SvgNodeProps[]
+  inputLines: SvgNodeProps[];
 }
 
-export const SvgInput = ({inputLines}:InputLinesProps) => {
+export const SvgInput = ({ inputLines }: InputLinesProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +16,7 @@ export const SvgInput = ({inputLines}:InputLinesProps) => {
       className="input-lines"
     >
       {/* Input Lines */}
-      {inputLines.map((inputLine) => (
+      {inputLines.map(inputLine => (
         <g key={inputLine.path}>
           <path
             d={inputLine.path}
@@ -47,5 +46,5 @@ export const SvgInput = ({inputLines}:InputLinesProps) => {
         </linearGradient>
       </defs>
     </svg>
-  )
-}
+  );
+};

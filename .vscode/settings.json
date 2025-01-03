@@ -1,3 +1,10 @@
 {
-  "workbench.colorTheme": "One Dark Pro Italic Vivid"
+  "workbench.colorTheme": "One Dark Pro Italic Vivid",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false
 }

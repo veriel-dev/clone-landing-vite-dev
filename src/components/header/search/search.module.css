@@ -29,7 +29,7 @@
   margin-left: 16px;
   padding: 0 8px;
   user-select: none;
-  transition: 
+  transition:
     background-color 0.3s,
     box-shadow 0.3s,
     color 0.3s;
@@ -89,11 +89,13 @@
   font-family: var(--astro-font-family-base);
   font-size: 12px;
   font-weight: 500;
-  transition: color 0.5s, border-color 0.5s;
+  transition:
+    color 0.5s,
+    border-color 0.5s;
 }
 
 .doc-search-button-key:first-child::after {
-  content: "Ctrl";
+  content: 'Ctrl';
   font-size: 12px;
   letter-spacing: normal;
   color: var(--docsearch-muted-color);
@@ -150,7 +152,7 @@
 }
 
 /* DocSearch Theme Variables */
-:root [class*="doc-search"] {
+:root [class*='doc-search'] {
   --docsearch-modal-shadow: var(--docsearch-modal-shadow);
   --docsearch-footer-shadow: var(--docsearch-footer-shadow);
   --docsearch-logo-color: var(--docsearch-logo-color);

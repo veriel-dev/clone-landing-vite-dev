@@ -1,15 +1,15 @@
-"use client"
-import { useEffect, useId, useRef, useState } from 'react'
-import { gsap } from 'gsap'
+'use client';
+import { useEffect, useId, useRef, useState } from 'react';
+import { gsap } from 'gsap';
 const GRADIENT_WIDTH = 30;
 export interface SvgNodeProps {
-  path?: string
-  position?: number
-  visible?: boolean
-  labelVisible?: boolean
-  label?: string
-  glowColor?: string | null
-  dotColor?: string | boolean | null
+  path?: string;
+  position?: number;
+  visible?: boolean;
+  labelVisible?: boolean;
+  label?: string;
+  glowColor?: string | null;
+  dotColor?: string | boolean | null;
 }
 export const SvgNode = ({
   path,
@@ -18,15 +18,15 @@ export const SvgNode = ({
   labelVisible = false,
   label,
   glowColor = '#41D1FF',
-  dotColor = '#9fe6fd'
+  dotColor = '#9fe6fd',
 }: SvgNodeProps) => {
   // Create refs for path element and animations
   const pathElement = useRef<SVGPathElement | null>(null);
   const gradientWidthScaleFactorRef = useRef(visible ? 1 : 0);
   const dotRadiusRef = useRef(visible ? 3 : 0);
   const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
-  const pathId =  useId();
-  
+  const pathId = useId();
+
   const updateDotPosition = () => {
     if (!pathElement.current) return;
     const length = pathElement.current.getTotalLength();
@@ -35,7 +35,7 @@ export const SvgNode = ({
   };
   useEffect(() => {
     updateDotPosition();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [position]);
   useEffect(() => {
     gsap.to(gradientWidthScaleFactorRef, {
@@ -66,7 +66,7 @@ export const SvgNode = ({
           cx={dotPosition.x}
           cy={dotPosition.y}
           r={`${visible ? 3 : 0}`}
-          fill={`${dotColor ? dotColor.toString(): 'transparent'}`}
+          fill={`${dotColor ? dotColor.toString() : 'transparent'}`}
           className="circle-dot"
           style={{ '--dot-color': dotColor } as React.CSSProperties}
         />
@@ -82,7 +82,7 @@ export const SvgNode = ({
           fontWeight="400"
           textAnchor="middle"
           alignmentBaseline="hanging"
-          className={`label ${labelVisible && "label--visible"}`}
+          className={`label ${labelVisible && 'label--visible'}`}
         >
           {label}
         </text>
@@ -109,7 +109,5 @@ export const SvgNode = ({
         </radialGradient>
       </defs>
     </g>
-  )
-}
-
-
+  );
+};

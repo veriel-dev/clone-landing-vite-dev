@@ -1,5 +1,3 @@
-
-
 .header {
   --header-background-color: rgba(15, 15, 15, 0.8);
   --header-transition-background-color: transition: background-color 0.5s;
@@ -29,7 +27,7 @@
   max-width: calc(var(--astro-layout-max-width) - 64px);
   height: var(--astro-nav-height, 4rem);
 }
-.header .navBar .wrapper *:not(.wrapper *){ 
+.header .navBar .wrapper *:not(.wrapper *) {
   transition: none;
 }
 
@@ -40,7 +38,7 @@
     background: var(--header-background-color);
     border-bottom: 1px solid #262626 !important;
   }
-  .header .navBar .wrapper { 
+  .header .navBar .wrapper {
     padding: 0 32px;
   }
 }

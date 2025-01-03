@@ -1,6 +1,6 @@
-"use client"
-import React, {  useRef } from 'react'
-import "../../css/featureSection/featureCI.css"
+'use client';
+import React, { useRef } from 'react';
+import '../../css/featureSection/featureCI.css';
 import { useCardAnimation, useSlideIn } from '@/hooks';
 import gsap from 'gsap';
 import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
@@ -11,50 +11,53 @@ export const FeatureCI = () => {
   // const checkmarks = useRef(Array.from({ length: 13 }, () => ({
   //   current: false
   // })));
-  const timelineRef = useRef<gsap.core.Timeline |null>(null);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const cardRef = useSlideIn();
-  const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
-    glowPosition.current = 0;
-    glowVisible.current = false;
-    
-    timelineRef.current = gsap.timeline();
-    // timelineRef.current.to(
-    //   glowPosition,
-    //   {
-    //     value: 1,
-    //     duration: 1.5,
-    //     ease: 'power2.in',
-    //   },
-    //   0,
-    // )
-    // timelineRef.current.call(
-    //   () => {
-    //     glowPosition.current = 0;
-    //   },
-    //   null,
-    //   0.2,
-    // )
-    // timelineRef.current.call(
-    //   () => {
-    //     glowVisible.current = false
-    //   },
-    //   null,
-    //   1.1,
-    // )
-    // checkmarks.current.forEach((checkmark, index) => {
-    //   timelineRef.current?.call(
-    //     () => {
-    //       checkmark.current = true;
-    //     },
-    //     null,
-    //     1.3 + index * 0.2,
-    //   )
-    // })
-    
-    return timelineRef.current;
-  }, { once: true });
-  return (
+  const { isCardActive, startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      glowPosition.current = 0;
+      glowVisible.current = false;
 
+      timelineRef.current = gsap.timeline();
+      // timelineRef.current.to(
+      //   glowPosition,
+      //   {
+      //     value: 1,
+      //     duration: 1.5,
+      //     ease: 'power2.in',
+      //   },
+      //   0,
+      // )
+      // timelineRef.current.call(
+      //   () => {
+      //     glowPosition.current = 0;
+      //   },
+      //   null,
+      //   0.2,
+      // )
+      // timelineRef.current.call(
+      //   () => {
+      //     glowVisible.current = false
+      //   },
+      //   null,
+      //   1.1,
+      // )
+      // checkmarks.current.forEach((checkmark, index) => {
+      //   timelineRef.current?.call(
+      //     () => {
+      //       checkmark.current = true;
+      //     },
+      //     null,
+      //     1.3 + index * 0.2,
+      //   )
+      // })
+
+      return timelineRef.current;
+    },
+    { once: true },
+  );
+  return (
     <div
       ref={cardRef}
       className="feature-card"
@@ -103,20 +106,10 @@ export const FeatureCI = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  className="circle-glow"
-                  opacity="0.4"
-                  filter="url(#filter-circle-glow)"
-                >
+                <g className="circle-glow" opacity="0.4" filter="url(#filter-circle-glow)">
                   <circle cx="25.712" cy="25.9725" r="17.6105" fill="#13B351" />
                 </g>
-                <circle
-                  className="circle-bg"
-                  cx="25.712"
-                  cy="25.9725"
-                  r="18.0268"
-                  fill="#171717"
-                />
+                <circle className="circle-bg" cx="25.712" cy="25.9725" r="18.0268" fill="#171717" />
                 <circle
                   className="circle-specular"
                   cx="25.712"
@@ -130,10 +123,7 @@ export const FeatureCI = () => {
                   d="M32.4256 21.1798C32.3326 21.086 32.2219 21.0115 32.1 20.9607C31.9781 20.9099 31.8473 20.8838 31.7152 20.8838C31.5831 20.8838 31.4523 20.9099 31.3304 20.9607C31.2085 21.0115 31.0978 21.086 31.0048 21.1798L23.5504 28.6442L20.4185 25.5023C20.3219 25.409 20.2079 25.3357 20.083 25.2864C19.9581 25.2372 19.8246 25.2131 19.6904 25.2154C19.5561 25.2177 19.4236 25.2465 19.3005 25.3C19.1773 25.3535 19.0659 25.4308 18.9726 25.5273C18.8793 25.6239 18.806 25.7379 18.7568 25.8629C18.7075 25.9878 18.6834 26.1212 18.6857 26.2555C18.688 26.3897 18.7168 26.5222 18.7703 26.6454C18.8238 26.7685 18.9011 26.8799 18.9977 26.9732L22.8399 30.8155C22.933 30.9093 23.0436 30.9837 23.1656 31.0345C23.2875 31.0853 23.4183 31.1115 23.5504 31.1115C23.6824 31.1115 23.8132 31.0853 23.9352 31.0345C24.0571 30.9837 24.1678 30.9093 24.2608 30.8155L32.4256 22.6506C32.5272 22.5569 32.6082 22.4432 32.6637 22.3166C32.7191 22.1901 32.7477 22.0534 32.7477 21.9152C32.7477 21.777 32.7191 21.6403 32.6637 21.5138C32.6082 21.3872 32.5272 21.2735 32.4256 21.1798Z"
                   fill="#7fd5a0"
                 />
-                <g
-                  className="checkmark-icon__glow"
-                  filter="url(#filter-checkmark-icon-glow)"
-                >
+                <g className="checkmark-icon__glow" filter="url(#filter-checkmark-icon-glow)">
                   <path
                     d="M32.4256 21.1798C32.3326 21.086 32.2219 21.0115 32.1 20.9607C31.9781 20.9099 31.8473 20.8838 31.7152 20.8838C31.5831 20.8838 31.4523 20.9099 31.3304 20.9607C31.2085 21.0115 31.0978 21.086 31.0048 21.1798L23.5504 28.6442L20.4185 25.5023C20.3219 25.409 20.2079 25.3357 20.083 25.2864C19.9581 25.2372 19.8246 25.2131 19.6904 25.2154C19.5561 25.2177 19.4236 25.2465 19.3005 25.3C19.1773 25.3535 19.0659 25.4308 18.9726 25.5273C18.8793 25.6239 18.806 25.7379 18.7568 25.8629C18.7075 25.9878 18.6834 26.1212 18.6857 26.2555C18.688 26.3897 18.7168 26.5222 18.7703 26.6454C18.8238 26.7685 18.9011 26.8799 18.9977 26.9732L22.8399 30.8155C22.933 30.9093 23.0436 30.9837 23.1656 31.0345C23.2875 31.0853 23.4183 31.1115 23.5504 31.1115C23.6824 31.1115 23.8132 31.0853 23.9352 31.0345C24.0571 30.9837 24.1678 30.9093 24.2608 30.8155L32.4256 22.6506C32.5272 22.5569 32.6082 22.4432 32.6637 22.3166C32.7191 22.1901 32.7477 22.0534 32.7477 21.9152C32.7477 21.777 32.7191 21.6403 32.6637 21.5138C32.6082 21.3872 32.5272 21.2735 32.4256 21.1798Z"
                     fill="#13B351"
@@ -301,11 +291,10 @@ export const FeatureCI = () => {
       <div className="feature__meta meta--center">
         <div className="meta__title">Continuous ecosystem integration</div>
         <div className="meta__description">
-          Our CI continuously tests Vite changes against downstream projects,
-          allowing us to improve Vite with stability and confidence.
+          Our CI continuously tests Vite changes against downstream projects, allowing us to improve
+          Vite with stability and confidence.
         </div>
       </div>
     </div>
-
-  )
-}
+  );
+};

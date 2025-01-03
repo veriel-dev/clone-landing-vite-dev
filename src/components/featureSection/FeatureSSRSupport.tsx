@@ -1,20 +1,19 @@
-"use client"
-import React from 'react'
-import { useCardAnimation, useSlideIn } from '@/hooks'
+'use client';
+import React from 'react';
+import { useCardAnimation, useSlideIn } from '@/hooks';
 
-import "../../css/featureSection/featureSSRSupport.css"
+import '../../css/featureSection/featureSSRSupport.css';
 export const FeatureSSRSupport = () => {
   const cardRef = useSlideIn(-100);
-  const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
-    return undefined
-  }, { once: true });
+  const { isCardActive, startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      return undefined;
+    },
+    { once: true },
+  );
   return (
-    <div
-      className="feature-card"
-      id="ssr-support"
-      onMouseOver={startAnimation}
-      ref={cardRef}
-    >
+    <div className="feature-card" id="ssr-support" onMouseOver={startAnimation} ref={cardRef}>
       <div className={`feature__visualization ${isCardActive ? 'active' : ''}`}>
         <svg
           width="402"
@@ -22,7 +21,7 @@ export const FeatureSSRSupport = () => {
           viewBox="0 0 402 166"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={{marginTop: "10px"}}
+          style={{ marginTop: '10px' }}
         >
           <g className="js">
             <g className="js__glow" filter="url(#filter-js-glow)">
@@ -66,7 +65,9 @@ export const FeatureSSRSupport = () => {
             />
           </g>
 
-          <text className="js-text" x="80" y="120">.TS</text>
+          <text className="js-text" x="80" y="120">
+            .TS
+          </text>
           <path
             className="connector"
             opacity="0.25"
@@ -85,14 +86,7 @@ export const FeatureSSRSupport = () => {
                 fillOpacity="0.1"
               />
               <g className="client__glow" filter="url(#filter-client-glow)">
-                <rect
-                  x="213"
-                  y="41.5342"
-                  width="12"
-                  height="12"
-                  rx="1"
-                  fill="#FFE358"
-                />
+                <rect x="213" y="41.5342" width="12" height="12" rx="1" fill="#FFE358" />
               </g>
               <rect
                 className="client__indicator"
@@ -115,7 +109,9 @@ export const FeatureSSRSupport = () => {
               strokeWidth="1.014"
             />
           </g>
-          <text className="client-text" x="236" y="53">Client transform</text>
+          <text className="client-text" x="236" y="53">
+            Client transform
+          </text>
           <g className="server" filter="url(#filter-server)">
             <g clipPath="url(#clip-server)">
               <rect
@@ -150,7 +146,9 @@ export const FeatureSSRSupport = () => {
               strokeWidth="1.014"
             />
           </g>
-          <text className="server-text" x="236" y="122">Server transform</text>
+          <text className="server-text" x="236" y="122">
+            Server transform
+          </text>
           <defs>
             <filter
               id="filter-js-glow"
@@ -162,16 +160,8 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="15"
-                result="effect1_foregroundBlur_1_6"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="15" result="effect1_foregroundBlur_1_6" />
             </filter>
             <filter
               id="filter-js-bg"
@@ -183,12 +173,7 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -204,15 +189,8 @@ export const FeatureSSRSupport = () => {
               <feOffset dy="4" />
               <feGaussianBlur stdDeviation="5" />
               <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="shape"
-                result="effect1_innerShadow_1_6"
-              />
+              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0" />
+              <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_6" />
             </filter>
             <filter
               id="filter-client"
@@ -224,12 +202,7 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -239,15 +212,8 @@ export const FeatureSSRSupport = () => {
               <feOffset dy="4" />
               <feGaussianBlur stdDeviation="2" />
               <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="shape"
-                result="effect1_innerShadow_1_6"
-              />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_6" />
             </filter>
             <filter
               id="filter-client-glow"
@@ -259,16 +225,8 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="5"
-                result="effect1_foregroundBlur_1_6"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_1_6" />
             </filter>
             <filter
               id="filter-server"
@@ -280,12 +238,7 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -295,15 +248,8 @@ export const FeatureSSRSupport = () => {
               <feOffset dy="4" />
               <feGaussianBlur stdDeviation="2" />
               <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="shape"
-                result="effect1_innerShadow_1_6"
-              />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_6" />
             </filter>
             <filter
               id="filter-server-glow"
@@ -315,16 +261,8 @@ export const FeatureSSRSupport = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="5"
-                result="effect1_foregroundBlur_1_6"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_1_6" />
             </filter>
             <linearGradient
               id="linear-js-glow"
@@ -371,24 +309,10 @@ export const FeatureSSRSupport = () => {
               <stop offset="1" stopColor="#FFE358" stopOpacity="0" />
             </linearGradient>
             <clipPath id="clip-client">
-              <rect
-                x="193"
-                y="22"
-                width="182"
-                height="51.0677"
-                rx="12.168"
-                fill="white"
-              />
+              <rect x="193" y="22" width="182" height="51.0677" rx="12.168" fill="white" />
             </clipPath>
             <clipPath id="clip-server">
-              <rect
-                x="193"
-                y="92.2065"
-                width="182.416"
-                height="51.0677"
-                rx="12.168"
-                fill="white"
-              />
+              <rect x="193" y="92.2065" width="182.416" height="51.0677" rx="12.168" fill="white" />
             </clipPath>
           </defs>
         </svg>
@@ -401,5 +325,5 @@ export const FeatureSSRSupport = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

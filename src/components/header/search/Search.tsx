@@ -10,17 +10,13 @@ export const Search = () => {
     'doc-search-search-icon': searchIconDoc,
     'doc-search-placeholder': placeholder,
     'doc-search-button-keys': buttonKeys,
-    'doc-search-button-key': buttonKey
+    'doc-search-button-key': buttonKey,
   } = styles;
 
   return (
     <div className={navBarSearch}>
       <div id="docsearch">
-        <button
-          type="button"
-          className={`doc-search ${docSearchButton}`}
-          aria-label="Search"
-        >
+        <button type="button" className={`doc-search ${docSearchButton}`} aria-label="Search">
           <span className={buttonContainer}>
             <span className={`${searchIcon} ${searchIconDoc}`} />
             <span className={placeholder}>Search</span>

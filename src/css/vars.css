@@ -1,4 +1,3 @@
-
 :root {
   --astro-c-white: #ffffff;
   --astro-c-black: #000000;
@@ -20,27 +19,27 @@
   --astro-c-gray-1: #dddde3;
   --astro-c-gray-2: #e4e4e9;
   --astro-c-gray-3: #ebebef;
-  --astro-c-gray-soft: rgba(142, 150, 170, .14);
+  --astro-c-gray-soft: rgba(142, 150, 170, 0.14);
   --astro-c-indigo-1: #a8b1ff;
   --astro-c-indigo-2: #3a5ccc;
   --astro-c-indigo-3: #5672cd;
-  --astro-c-indigo-soft: rgba(100, 108, 255, .14);
+  --astro-c-indigo-soft: rgba(100, 108, 255, 0.14);
   --astro-c-purple-1: #6f42c1;
   --astro-c-purple-2: #7e4cc9;
   --astro-c-purple-3: #8e5cd9;
-  --astro-c-purple-soft: rgba(159, 122, 234, .14);
+  --astro-c-purple-soft: rgba(159, 122, 234, 0.14);
   --astro-c-green-1: #18794e;
   --astro-c-green-2: #299764;
   --astro-c-green-3: #30a46c;
-  --astro-c-green-soft: rgba(16, 185, 129, .14);
+  --astro-c-green-soft: rgba(16, 185, 129, 0.14);
   --astro-c-yellow-1: #915930;
   --astro-c-yellow-2: #946300;
   --astro-c-yellow-3: #9f6a00;
-  --astro-c-yellow-soft: rgba(234, 179, 8, .14);
+  --astro-c-yellow-soft: rgba(234, 179, 8, 0.14);
   --astro-c-red-1: #b8272c;
   --astro-c-red-2: #d5393e;
   --astro-c-red-3: #e0575b;
-  --astro-c-red-soft: rgba(244, 63, 94, .14);
+  --astro-c-red-soft: rgba(244, 63, 94, 0.14);
   --astro-c-sponsor: #db2777;
 }
 
@@ -48,27 +47,27 @@
   --astro-c-gray-1: #515c67;
   --astro-c-gray-2: #414853;
   --astro-c-gray-3: #32363f;
-  --astro-c-gray-soft: rgba(101, 117, 133, .16);
+  --astro-c-gray-soft: rgba(101, 117, 133, 0.16);
   --astro-c-indigo-1: #a8b1ff;
   --astro-c-indigo-2: #5c73e7;
   --astro-c-indigo-3: #3e63dd;
-  --astro-c-indigo-soft: rgba(100, 108, 255, .16);
+  --astro-c-indigo-soft: rgba(100, 108, 255, 0.16);
   --astro-c-purple-1: #c8abfa;
   --astro-c-purple-2: #a879e6;
   --astro-c-purple-3: #8e5cd9;
-  --astro-c-purple-soft: rgba(159, 122, 234, .16);
+  --astro-c-purple-soft: rgba(159, 122, 234, 0.16);
   --astro-c-green-1: #3dd68c;
   --astro-c-green-2: #30a46c;
   --astro-c-green-3: #298459;
-  --astro-c-green-soft: rgba(16, 185, 129, .16);
+  --astro-c-green-soft: rgba(16, 185, 129, 0.16);
   --astro-c-yellow-1: #f9b44e;
   --astro-c-yellow-2: #da8b17;
   --astro-c-yellow-3: #a46a0a;
-  --astro-c-yellow-soft: rgba(234, 179, 8, .16);
+  --astro-c-yellow-soft: rgba(234, 179, 8, 0.16);
   --astro-c-red-1: #f66f81;
   --astro-c-red-2: #f14158;
   --astro-c-red-3: #b62a3c;
-  --astro-c-red-soft: rgba(244, 63, 94, .16);
+  --astro-c-red-soft: rgba(244, 63, 94, 0.16);
 }
 
 :root {
@@ -82,7 +81,7 @@
   --astro-c-bg: #1b1b1f;
   --astro-c-bg-alt: #161618;
   --astro-c-bg-elv: #202127;
-  --astro-c-bg-soft: #202127
+  --astro-c-bg-soft: #202127;
 }
 
 :root {
@@ -98,11 +97,10 @@
 }
 
 :root {
-  --astro-c-text-1: rgba(255, 255, 245, .86);
-  --astro-c-text-2: rgba(235, 235, 245, .6);
-  --astro-c-text-3: rgba(235, 235, 245, .38);
+  --astro-c-text-1: rgba(255, 255, 245, 0.86);
+  --astro-c-text-2: rgba(235, 235, 245, 0.6);
+  --astro-c-text-3: rgba(235, 235, 245, 0.38);
 }
-
 
 :root {
   --astro-c-default-1: var(--astro-c-gray-1);
@@ -149,15 +147,15 @@
   --astro-c-brand-lightest: #bcc0ff;
   --astro-c-brand-dark: #535bf2;
   --astro-c-brand-darker: #454ce1;
-  --astro-c-brand-dimm: rgba(100, 108, 255, .08);
+  --astro-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
 :root {
-  --astro-shadow-1: 0 1px 2px rgba(0, 0, 0, .04), 0 1px 2px rgba(0, 0, 0, .06);
-  --astro-shadow-2: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
-  --astro-shadow-3: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08);
-  --astro-shadow-4: 0 14px 44px rgba(0, 0, 0, .12), 0 3px 9px rgba(0, 0, 0, .12);
-  --astro-shadow-5: 0 18px 56px rgba(0, 0, 0, .16), 0 4px 12px rgba(0, 0, 0, .16);
+  --astro-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --astro-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --astro-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --astro-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --astro-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 :root {
   --astro-z-index-footer: 10;
@@ -168,17 +166,19 @@
   --astro-z-index-sidebar: 60;
 }
 :root {
-  --astro-font-family-base: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-optical-sizing: auto
+  --astro-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-optical-sizing: auto;
 }
 
 :root:where(:lang(zh)) {
-  --astro-font-family-base: "Punctuation SC", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  --astro-font-family-base: 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @media (min-width: 960px) {
   :root {
-      --astro-z-index-sidebar: 25;
+    --astro-z-index-sidebar: 25;
   }
 }
 
@@ -187,5 +187,5 @@
 }
 
 :root {
-  --astro-header-anchor-symbol: "#";
+  --astro-header-anchor-symbol: '#';
 }

@@ -1,6 +1,6 @@
-"use client"
-import gsap from 'gsap'
-import React, { useRef, useEffect, useState } from 'react'
+'use client';
+import gsap from 'gsap';
+import React, { useRef, useEffect, useState } from 'react';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
 
@@ -11,10 +11,16 @@ interface FeatureSectionProps {
   description?: string;
   type?: 'blue' | 'pink';
   children: React.ReactNode;
-  className?: string
+  className?: string;
 }
 
-export const FeatureSection = ({ title, description, type = "blue", children, className }: FeatureSectionProps) => {
+export const FeatureSection = ({
+  title,
+  description,
+  type = 'blue',
+  children,
+  className,
+}: FeatureSectionProps) => {
   const [animationPercentage, setAnimationPercentage] = useState(0);
   const [animationVisible, setAnimationVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -43,7 +49,7 @@ export const FeatureSection = ({ title, description, type = "blue", children, cl
             setAnimationPercentage(this.targets()[0].value);
           },
         },
-        0
+        0,
       );
     // Cleanup
     return () => {
@@ -103,17 +109,19 @@ export const FeatureSection = ({ title, description, type = "blue", children, cl
             </linearGradient>
           </defs>
         </svg>
-        <h2 style={{
-          '--text-color': type === 'blue' ? '#41D1FF' : '#BD34FE'
-        } as React.CSSProperties}>
+        <h2
+          style={
+            {
+              '--text-color': type === 'blue' ? '#41D1FF' : '#BD34FE',
+            } as React.CSSProperties
+          }
+        >
           {title}
         </h2>
         {description && <h3>{description}</h3>}
       </div>
 
-      <div className="feature-section__grid">
-        {children}
-      </div>
+      <div className="feature-section__grid">{children}</div>
     </section>
-  )
-}
+  );
+};

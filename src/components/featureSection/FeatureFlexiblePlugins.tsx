@@ -1,16 +1,20 @@
-"use client"
-import { useCardAnimation, useSlideIn } from '@/hooks'
-import React from 'react'
+'use client';
+import { useCardAnimation, useSlideIn } from '@/hooks';
+import React from 'react';
 
-import "../../css/featureSection/featureFlexiblePlugins.css"
+import '../../css/featureSection/featureFlexiblePlugins.css';
 export const FeatureFlexiblePlugins = () => {
   const cardRef = useSlideIn(-100);
-  const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
-    return null
-  }, { once: true });
+  const { isCardActive, startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      return null;
+    },
+    { once: true },
+  );
   return (
     <div
-      className='feature-card'
+      className="feature-card"
       id="flexible-plugin-system"
       ref={cardRef}
       onMouseOver={startAnimation}
@@ -132,10 +136,7 @@ export const FeatureFlexiblePlugins = () => {
                 />
               </g>
               <g className="vite-chip__v" filter="url(#filter-chip-shadow)">
-                <g
-                  className="vite-chip__highlight"
-                  filter="url(#filter-vite-chip-highlight)"
-                >
+                <g className="vite-chip__highlight" filter="url(#filter-vite-chip-highlight)">
                   <rect
                     width="153.998"
                     height="153.998"
@@ -232,15 +233,8 @@ export const FeatureFlexiblePlugins = () => {
                 <feOffset dy="21.6138" />
                 <feGaussianBlur stdDeviation="19.5875" />
                 <feComposite in2="hardAlpha" operator="out" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow_0_5"
-                />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_5" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -259,11 +253,7 @@ export const FeatureFlexiblePlugins = () => {
               >
                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feGaussianBlur in="BackgroundImageFix" stdDeviation="13.5086" />
-                <feComposite
-                  in2="SourceAlpha"
-                  operator="in"
-                  result="effect1_backgroundBlur_0_5"
-                />
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_5" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -341,7 +331,6 @@ export const FeatureFlexiblePlugins = () => {
           extra Vite-specific options.`}
         </div>
       </div>
-      
     </div>
-  )
-}
+  );
+};

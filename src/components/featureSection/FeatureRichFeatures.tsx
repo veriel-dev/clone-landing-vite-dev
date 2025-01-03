@@ -1,15 +1,11 @@
-"use client"
-import { useCardAnimation, useSlideIn } from '@/hooks'
-import React from 'react'
-import { LogoCSS3, LogoJS, LogoJSON, LogoPOSTCSS, LogoTS, LogoWA } from '../svg'
-import "../../css/featureSection/featureRichFeatures.css"
+'use client';
+import { useCardAnimation, useSlideIn } from '@/hooks';
+import React from 'react';
+import { LogoCSS3, LogoJS, LogoJSON, LogoPOSTCSS, LogoTS, LogoWA } from '../svg';
+import '../../css/featureSection/featureRichFeatures.css';
 export const FeatureRichFeatures = () => {
-  const cardRef = useSlideIn(-100)
-  const { isCardActive, startAnimation } = useCardAnimation(
-    cardRef,
-    () => null,
-    { once: true }
-  )
+  const cardRef = useSlideIn(-100);
+  const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => null, { once: true });
   return (
     <div
       ref={cardRef}
@@ -115,5 +111,5 @@ export const FeatureRichFeatures = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

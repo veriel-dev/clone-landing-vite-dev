@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
-import "@/css/globals.css"
-import "@/css/vars.css"
-import "@/css/heroDiagram.css"
-import "@/css/featureSection.css"
-import { Header } from "@/components";
-
-
+import type { Metadata } from 'next';
+import '@/css/globals.css';
+import '@/css/vars.css';
+import '@/css/heroDiagram.css';
+import '@/css/featureSection.css';
+import { Header } from '@/components';
 
 export const metadata: Metadata = {
-  title: "Vite | Next Generation Frontend Tooling",
-  description: "Next Generation Frontend Tooling",
-  icons: "https://vite.dev/logo.svg",
+  title: 'Vite | Next Generation Frontend Tooling',
+  description: 'Next Generation Frontend Tooling',
+  icons: 'https://vite.dev/logo.svg',
 };
-
 
 export default function RootLayout({
   children,
@@ -22,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <meta name="generator" content={"Next.js 15.1.3"} />
+        <meta name="generator" content={'Next.js 15.1.3'} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={"https://vite.dev/og-image.jpg"} />
+        <meta property="og:image" content={'https://vite.dev/og-image.jpg'} />
         <meta property="og:url" content="https://vite.dev" />
-        <meta property="og:description" content={"Next Generation Frontend Tooling"} />
+        <meta property="og:description" content={'Next Generation Frontend Tooling'} />
         <meta property="og:site_name" content="vitejs" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vite_js" />
@@ -38,11 +35,9 @@ export default function RootLayout({
           {/* Main Content */}
           <div className="content">
             <div className="home">
-              <div style={{ position: "relative" }}>
+              <div style={{ position: 'relative' }}>
                 <div>
-                  <div className="home">
-                    {children}
-                  </div>
+                  <div className="home">{children}</div>
                 </div>
               </div>
             </div>

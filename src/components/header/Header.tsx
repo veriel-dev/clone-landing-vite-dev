@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import styles from "./header.module.css"
-import { Languages } from "./languages"
-import { Logo } from "./logo"
-import { NavBar } from "./navBar"
-import { Search } from "./search"
-import { SocialLinks } from "./socialLinks"
+import styles from './header.module.css';
+import { Languages } from './languages';
+import { Logo } from './logo';
+import { NavBar } from './navBar';
+import { Search } from './search';
+import { SocialLinks } from './socialLinks';
 export const Header = () => {
   return (
     <header id="header" className={styles.header}>
@@ -25,6 +25,5 @@ export const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
-
+  );
+};

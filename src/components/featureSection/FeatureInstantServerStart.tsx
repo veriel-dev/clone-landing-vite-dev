@@ -1,9 +1,9 @@
-"use client"
-import React, { useState, useRef, useEffect } from 'react'
-import gsap from 'gsap'
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap';
 import { useCardAnimation, useSlideIn } from '@/hooks';
 
-import "@/css/featureSection/featureInstantServerStart.css"
+import '@/css/featureSection/featureInstantServerStart.css';
 
 export const FeatureInstantServerStart = () => {
   const [commandTriggered, setCommandTriggered] = useState(false);
@@ -25,7 +25,7 @@ export const FeatureInstantServerStart = () => {
         x: -60,
         opacity: 0,
         duration: 0.8,
-        ease: 'power2.out'
+        ease: 'power2.out',
       });
     }
   }, []);
@@ -42,13 +42,11 @@ export const FeatureInstantServerStart = () => {
     return () => window.removeEventListener('keydown', handleEnterPress);
   }, []);
 
-
-
   return (
-    <div 
-      ref={cardRef} 
-      id="instant-server-start-card" 
-      className='feature-card' 
+    <div
+      ref={cardRef}
+      id="instant-server-start-card"
+      className="feature-card"
       onMouseOver={startAnimation}
     >
       <div className="feature__visualization">
@@ -79,18 +77,8 @@ export const FeatureInstantServerStart = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect
-                width="28"
-                height="28"
-                rx="4"
-                fill="url(#paint0_linear_693_14840)"
-              />
-              <rect
-                width="28"
-                height="28"
-                rx="4"
-                fill="url(#paint1_linear_693_14840)"
-              />
+              <rect width="28" height="28" rx="4" fill="url(#paint0_linear_693_14840)" />
+              <rect width="28" height="28" rx="4" fill="url(#paint1_linear_693_14840)" />
               <rect
                 x="0.5"
                 y="0.5"
@@ -127,10 +115,7 @@ export const FeatureInstantServerStart = () => {
                     in2="BackgroundImageFix"
                     result="shape"
                   />
-                  <feGaussianBlur
-                    stdDeviation="3"
-                    result="effect1_foregroundBlur_693_14840"
-                  />
+                  <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_693_14840" />
                 </filter>
                 <linearGradient
                   id="paint0_linear_693_14840"
@@ -158,9 +143,7 @@ export const FeatureInstantServerStart = () => {
             </svg>
           )}
           {highlightEnter && <div className="terminal__enter-pulse" />}
-          {commandTriggered && (
-            <span className="terminal__ready-label">Ready in 96ms</span>
-          )}
+          {commandTriggered && <span className="terminal__ready-label">Ready in 96ms</span>}
           <div className="terminal__glow" />
         </div>
         <div className={`connection-line ${commandTriggered ? 'active' : ''}`} />
@@ -172,6 +155,5 @@ export const FeatureInstantServerStart = () => {
         </div>
       </div>
     </div>
-
-  )
-}
+  );
+};

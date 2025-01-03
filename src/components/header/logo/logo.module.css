@@ -21,9 +21,8 @@
   height: var(--astro-nav-logo-height);
 }
 
-
 @media (min-width: 960px) {
-  .navBarTitle.title  {
+  .navBarTitle.title {
     flex-shrink: 0;
   }
 }

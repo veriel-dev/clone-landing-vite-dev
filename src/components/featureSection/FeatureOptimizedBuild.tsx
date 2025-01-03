@@ -1,56 +1,63 @@
-"use client"
-import React, { useState, useRef } from 'react'
-import gsap from "gsap"
+'use client';
+import React, { useState, useRef } from 'react';
+import gsap from 'gsap';
 import { useCardAnimation, useSlideIn } from '@/hooks';
 import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
 
-import "../../css/featureSection/featureOptimizedBuild.css"
+import '../../css/featureSection/featureOptimizedBuild.css';
 export const FeatureOptimizedBuild = () => {
   const [isBoltActive, setIsBoltActive] = useState(false);
 
-  const [nodes] = useState(Array.from({ length: 10 }, () => {
-    return {
-      position: 0,
-      visible: false
-    }
-  }));
+  const [nodes] = useState(
+    Array.from({ length: 10 }, () => {
+      return {
+        position: 0,
+        visible: false,
+      };
+    }),
+  );
 
   const cardRef = useSlideIn();
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const subTimelineRef = useRef<gsap.core.Timeline | null>(null);
 
-  const { startAnimation } = useCardAnimation(cardRef, () => {
-    timelineRef.current = gsap.timeline();
-    // Animate each node with its own sub-timeline
-    nodes.forEach((node) => {
-      subTimelineRef.current = gsap.timeline();
-      // First, make the node visible
-      subTimelineRef.current?.call(() => {
-        node.visible = true;
-      });  
-      // Make the node invisible near the end
-      subTimelineRef.current?.call(() => {
-        node.visible = false;
-      }, [], '-=0.6');
-      // Add this sub-timeline to the main timeline at a random position
-      timelineRef.current?.add(subTimelineRef.current, Math.random());
-    });
-    // Animate in the bolt near the end
-    timelineRef.current.call(
-      () => {
-        setIsBoltActive(true);
-      },
-      null,
-      '-=0.5'
-    );
-
-  }, { once: true });
-
-
+  const { startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      timelineRef.current = gsap.timeline();
+      // Animate each node with its own sub-timeline
+      nodes.forEach(node => {
+        subTimelineRef.current = gsap.timeline();
+        // First, make the node visible
+        subTimelineRef.current?.call(() => {
+          node.visible = true;
+        });
+        // Make the node invisible near the end
+        subTimelineRef.current?.call(
+          () => {
+            node.visible = false;
+          },
+          [],
+          '-=0.6',
+        );
+        // Add this sub-timeline to the main timeline at a random position
+        timelineRef.current?.add(subTimelineRef.current, Math.random());
+      });
+      // Animate in the bolt near the end
+      timelineRef.current.call(
+        () => {
+          setIsBoltActive(true);
+        },
+        null,
+        '-=0.5',
+      );
+    },
+    { once: true },
+  );
 
   return (
     <div
-      className='feature-card'
+      className="feature-card"
       id="optimized-build-card"
       onMouseEnter={startAnimation}
       ref={cardRef}
@@ -78,10 +85,7 @@ export const FeatureOptimizedBuild = () => {
             glow-color="#FFE358"
           />
 
-          <path
-            d="M195 50L69.295 47.754L-21 41.016"
-            stroke="url(#ob-linear-gradient-left)"
-          />
+          <path d="M195 50L69.295 47.754L-21 41.016" stroke="url(#ob-linear-gradient-left)" />
 
           <SvgNode
             path="M195 50L69.295 47.754L-21 41.016"
@@ -91,10 +95,7 @@ export const FeatureOptimizedBuild = () => {
             glow-color="#FFE358"
           />
 
-          <path
-            d="M195 68.5L-21 69.5642"
-            stroke="url(#ob-linear-gradient-left)"
-          />
+          <path d="M195 68.5L-21 69.5642" stroke="url(#ob-linear-gradient-left)" />
 
           <SvgNode
             path="M195 68.5L-21 69.5642"
@@ -104,10 +105,7 @@ export const FeatureOptimizedBuild = () => {
             glow-color="#FFE358"
           />
 
-          <path
-            d="M195 87L69.2951 89.2463L-21 96.1614"
-            stroke="url(#ob-linear-gradient-left)"
-          />
+          <path d="M195 87L69.2951 89.2463L-21 96.1614" stroke="url(#ob-linear-gradient-left)" />
 
           <SvgNode
             path="M195 87L69.2951 89.2463L-21 96.1614"
@@ -166,10 +164,7 @@ export const FeatureOptimizedBuild = () => {
             glow-color="#FFE358"
           />
 
-          <path
-            d="M0 75L125.705 77.246L216 83.984"
-            stroke="url(#ob-linear-gradient-right)"
-          />
+          <path d="M0 75L125.705 77.246L216 83.984" stroke="url(#ob-linear-gradient-right)" />
 
           <SvgNode
             path="M0 75L125.705 77.246L216 83.984"
@@ -179,10 +174,7 @@ export const FeatureOptimizedBuild = () => {
             glow-color="#FFE358"
           />
 
-          <path
-            d="M4.65162e-08 56.5L216 55.4358"
-            stroke="url(#ob-linear-gradient-right)"
-          />
+          <path d="M4.65162e-08 56.5L216 55.4358" stroke="url(#ob-linear-gradient-right)" />
 
           <SvgNode
             path="M4.65162e-08 56.5L216 55.4358"
@@ -319,16 +311,8 @@ export const FeatureOptimizedBuild = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="28.4561"
-                result="effect1_foregroundBlur_693_18989"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="28.4561" result="effect1_foregroundBlur_693_18989" />
             </filter>
             <filter
               id="filter-bolt-edge-glow"
@@ -340,16 +324,8 @@ export const FeatureOptimizedBuild = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="3.34777"
-                result="effect1_foregroundBlur_693_18989"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="3.34777" result="effect1_foregroundBlur_693_18989" />
             </filter>
             <radialGradient
               id="paint0_radial_693_18989"
@@ -398,7 +374,7 @@ export const FeatureOptimizedBuild = () => {
               <stop offset="0" stopColor="#9D75B8" />
               <stop offset="0.0833333" stopColor="#B96EFC" />
               <stop offset="1" stopColor="#8000FF" />
-            </radialGradient> 
+            </radialGradient>
             <radialGradient
               id="radial-bolt-edge"
               cx="0"
@@ -409,7 +385,7 @@ export const FeatureOptimizedBuild = () => {
             >
               <stop offset="0" stopColor="#B96EFC" />
               <stop offset="1" stopColor="#8000FF" />
-            </radialGradient> 
+            </radialGradient>
           </defs>
         </svg>
       </div>
@@ -420,5 +396,5 @@ export const FeatureOptimizedBuild = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

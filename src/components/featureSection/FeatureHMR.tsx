@@ -1,30 +1,29 @@
-"use client"
-import React, { useState, useRef} from 'react'
-import gsap from "gsap"
+'use client';
+import React, { useState, useRef } from 'react';
+import gsap from 'gsap';
 import { useCardAnimation, useSlideIn } from '@/hooks';
 
-import "../../css/featureSection/featureHMR.css"
+import '../../css/featureSection/featureHMR.css';
 
 export const FeatureHMR = () => {
   const [terminalActive, setTerminalActive] = useState(false);
   const [connectionsActive, setConnectionsActive] = useState(false);
   const [browserActive, setBrowserActive] = useState(false);
-  const timelineRef = useRef<gsap.core.Timeline |null>(null);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   const cardRef = useSlideIn();
-  const { startAnimation } = useCardAnimation(cardRef, () => {
-    timelineRef.current = gsap.timeline();
-    timelineRef.current.call(() => setTerminalActive(true), [], 0);
-    timelineRef.current.call(() => setConnectionsActive(true), [], 0.4);
-    timelineRef.current.call(() => setBrowserActive(true), [], 1);
-  }, {once: true});
+  const { startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      timelineRef.current = gsap.timeline();
+      timelineRef.current.call(() => setTerminalActive(true), [], 0);
+      timelineRef.current.call(() => setConnectionsActive(true), [], 0.4);
+      timelineRef.current.call(() => setBrowserActive(true), [], 1);
+    },
+    { once: true },
+  );
   return (
-    <div
-      ref={cardRef}
-      className="feature-card"
-      id="hmr-card"
-      onMouseOver={startAnimation}
-    >
+    <div ref={cardRef} className="feature-card" id="hmr-card" onMouseOver={startAnimation}>
       <div className="feature__visualization">
         {/* Terminal / IDE (left-side) */}
         <div className={`terminal ${terminalActive ? 'active' : ''}`}>
@@ -49,21 +48,11 @@ export const FeatureHMR = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M0.920898 2.53252C0.920898 1.15812 2.03507 0.0439453 3.40947 0.0439453H102.952C104.327 0.0439453 105.441 1.15812 105.441 2.53252V12.4868C105.441 13.8612 104.327 14.9754 102.952 14.9754H3.40948C2.03507 14.9754 0.920898 13.8612 0.920898 12.4868V2.53252Z"
-            />
-            <path
-              d="M0.920898 24.9297C0.920898 23.5553 2.03507 22.4411 3.40947 22.4411H140.281C141.656 22.4411 142.77 23.5553 142.77 24.9297V34.884C142.77 36.2584 141.656 37.3726 140.281 37.3726H3.40948C2.03508 37.3726 0.920898 36.2584 0.920898 34.884V24.9297Z"
-            />
-            <path
-              d="M0.920898 47.3268C0.920898 45.9524 2.03507 44.8383 3.40947 44.8383H32.0281C33.4025 44.8383 34.5167 45.9524 34.5167 47.3268V57.2811C34.5167 58.6555 33.4025 59.7697 32.0281 59.7697H3.40948C2.03507 59.7697 0.920898 58.6555 0.920898 57.2811V47.3268Z"
-            />
-            <path
-              d="M0.920898 69.724C0.920898 68.3496 2.03507 67.2354 3.40947 67.2354H195.03C196.404 67.2354 197.518 68.3496 197.518 69.724V79.6783C197.518 81.0527 196.404 82.1669 195.03 82.1669H3.40948C2.03507 82.1669 0.920898 81.0527 0.920898 79.6783V69.724Z"
-            />
-            <path
-              d="M0.920898 92.9102C0.920898 91.5358 2.03507 90.4217 3.40947 90.4217H89.2653C90.6397 90.4217 91.7539 91.5358 91.7539 92.9102V102.865C91.7539 104.239 90.6397 105.353 89.2653 105.353H3.40947C2.03507 105.353 0.920898 104.239 0.920898 102.865V92.9102Z"
-            />
+            <path d="M0.920898 2.53252C0.920898 1.15812 2.03507 0.0439453 3.40947 0.0439453H102.952C104.327 0.0439453 105.441 1.15812 105.441 2.53252V12.4868C105.441 13.8612 104.327 14.9754 102.952 14.9754H3.40948C2.03507 14.9754 0.920898 13.8612 0.920898 12.4868V2.53252Z" />
+            <path d="M0.920898 24.9297C0.920898 23.5553 2.03507 22.4411 3.40947 22.4411H140.281C141.656 22.4411 142.77 23.5553 142.77 24.9297V34.884C142.77 36.2584 141.656 37.3726 140.281 37.3726H3.40948C2.03508 37.3726 0.920898 36.2584 0.920898 34.884V24.9297Z" />
+            <path d="M0.920898 47.3268C0.920898 45.9524 2.03507 44.8383 3.40947 44.8383H32.0281C33.4025 44.8383 34.5167 45.9524 34.5167 47.3268V57.2811C34.5167 58.6555 33.4025 59.7697 32.0281 59.7697H3.40948C2.03507 59.7697 0.920898 58.6555 0.920898 57.2811V47.3268Z" />
+            <path d="M0.920898 69.724C0.920898 68.3496 2.03507 67.2354 3.40947 67.2354H195.03C196.404 67.2354 197.518 68.3496 197.518 69.724V79.6783C197.518 81.0527 196.404 82.1669 195.03 82.1669H3.40948C2.03507 82.1669 0.920898 81.0527 0.920898 79.6783V69.724Z" />
+            <path d="M0.920898 92.9102C0.920898 91.5358 2.03507 90.4217 3.40947 90.4217H89.2653C90.6397 90.4217 91.7539 91.5358 91.7539 92.9102V102.865C91.7539 104.239 90.6397 105.353 89.2653 105.353H3.40947C2.03507 105.353 0.920898 104.239 0.920898 102.865V92.9102Z" />
           </svg>
         </div>
         {/* Browser SVG */}
@@ -76,15 +65,7 @@ export const FeatureHMR = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g className="browser__background" filter="url(#shadow)">
-            <rect
-              x="17"
-              y="-33"
-              width="442"
-              height="237"
-              rx="18"
-              fill="#242424"
-              fillOpacity="1"
-            />
+            <rect x="17" y="-33" width="442" height="237" rx="18" fill="#242424" fillOpacity="1" />
           </g>
           <path
             d="M46.4409 148.062C46.4409 146.436 47.759 145.118 49.385 145.118H156.845C158.471 145.118 159.789 146.436 159.789 148.062V198.112C159.789 199.738 158.471 201.056 156.845 201.056H49.385C47.759 201.056 46.4409 199.738 46.4409 198.112V148.062Z"
@@ -152,12 +133,7 @@ export const FeatureHMR = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
               <feGaussianBlur stdDeviation="8" result="glow-effect" />
             </filter>
             <linearGradient
@@ -197,7 +173,7 @@ export const FeatureHMR = () => {
         </svg>
         {/* Blue glow effect */}
         <div className="corner-glow" />
-         {/* Connecting lines */}
+        {/* Connecting lines */}
         <div className={`connecting-lines ${connectionsActive ? 'active' : ''}`}>
           <div className="connecting-lines__line" />
           <div className="connecting-lines__line" />
@@ -211,5 +187,5 @@ export const FeatureHMR = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,29 +1,28 @@
-"use client"
-import React from 'react'
-import { useCardAnimation, useSlideIn } from '@/hooks'
+'use client';
+import React from 'react';
+import { useCardAnimation, useSlideIn } from '@/hooks';
 
-import "../../css/featureSection/featureTypedAPI.css"
+import '../../css/featureSection/featureTypedAPI.css';
 export const FeatureTypedAPI = () => {
   const cardRef = useSlideIn();
 
-  const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
-    return null
-  }, { once: true });
+  const { isCardActive, startAnimation } = useCardAnimation(
+    cardRef,
+    () => {
+      return null;
+    },
+    { once: true },
+  );
   return (
-    <div 
-      className="feature-card"
-      id="fully-typed-api"
-      onMouseEnter={startAnimation}
-      ref={cardRef}
-      
-    >
+    <div className="feature-card" id="fully-typed-api" onMouseEnter={startAnimation} ref={cardRef}>
       <div className={`feature__visualization ${isCardActive ? 'active' : ''}`}>
         <div className="ide">
           <span className="code code__inactive">
             <span className="code--red">import</span> {'{ createServer }'}
             <span className="code--red"> from</span>
             <span className="code--blue"> {`'vite'`}</span>
-            <br /><br />
+            <br />
+            <br />
             <span className="code--red">const</span> server =
             <span className="code--red"> await</span>
             <span className="code--purple"> createServer</span>({'])'}
@@ -46,7 +45,7 @@ export const FeatureTypedAPI = () => {
             (method) ViteDevServer.<span className="code--blue">listen</span>
             (port<span className="code--blue">?:</span> number
             <span className="code--blue">| undefined,</span> isRestart
-            <span className="code--blue">?:</span> boolean 
+            <span className="code--blue">?:</span> boolean
             <span className="code--blue">| undefined</span>):
             <span className="code--yellow">Promise</span>
             <span className="code--blue">&lt;</span>ViteDevServer
@@ -61,5 +60,5 @@ export const FeatureTypedAPI = () => {
         <div className="meta__description">Designed to be built on top of.</div>
       </div>
     </div>
-  )
-}
+  );
+};

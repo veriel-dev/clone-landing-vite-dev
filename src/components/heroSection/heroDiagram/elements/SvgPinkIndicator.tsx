@@ -1,8 +1,7 @@
-
-import React from 'react'
+import React from 'react';
 
 interface PinkIndicatorProps {
-  active: boolean
+  active: boolean;
 }
 export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
   return (
@@ -13,7 +12,7 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
         viewBox="0 0 141 67"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`pink-indicator ${active && "active"}`}
+        className={`pink-indicator ${active && 'active'}`}
       >
         <g opacity="0.2" filter="url(#filter0_d_1_8)">
           <path
@@ -116,21 +115,9 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
             <feOffset dy="2.30833" />
             <feGaussianBlur stdDeviation="2.30833" />
             <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_1_8"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_1_8"
-              result="shape"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_8" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_8" result="shape" />
           </filter>
           <filter
             id="filter1_i_1_8"
@@ -142,12 +129,7 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
             colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -157,10 +139,7 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
             <feOffset />
             <feGaussianBlur stdDeviation="2.30833" />
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0" />
             <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_8" />
           </filter>
           <filter
@@ -173,16 +152,8 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
             colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="8.80116"
-              result="effect1_foregroundBlur_1_8"
-            />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="8.80116" result="effect1_foregroundBlur_1_8" />
           </filter>
           <filter
             id="filter3_f_1_8"
@@ -194,20 +165,12 @@ export const SvgPinkIndicator = ({ active }: PinkIndicatorProps) => {
             colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="5.77083"
-              result="effect1_foregroundBlur_1_8"
-            />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="5.77083" result="effect1_foregroundBlur_1_8" />
           </filter>
         </defs>
       </svg>
-      <div className={`pink-glow ${active && "active"}`} />
+      <div className={`pink-glow ${active && 'active'}`} />
     </>
-  )
-}
+  );
+};

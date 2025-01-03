@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import React from 'react'
-import styles from "./social.module.css"
+import React from 'react';
+import styles from './social.module.css';
 import { BlueSkyIcon, DiscordIcon, GithubIcon, MastodonIcon, XIcon } from '@/components/svg';
 
 interface SocialLink {
   platform: 'bluesky' | 'mastodon' | 'x' | 'discord' | 'github';
   url: string;
   label: string;
-  icon: React.ReactNode
+  icon: React.ReactNode;
 }
 
 export const SocialLinks = () => {
@@ -16,32 +16,32 @@ export const SocialLinks = () => {
       platform: 'bluesky',
       url: 'https://bsky.app/profile/vite.dev',
       label: 'Bluesky',
-      icon: <BlueSkyIcon />
+      icon: <BlueSkyIcon />,
     },
     {
       platform: 'mastodon',
       url: 'https://elk.zone/m.webtoo.ls/@vite',
       label: 'Mastodon',
-      icon: <MastodonIcon />
+      icon: <MastodonIcon />,
     },
     {
       platform: 'x',
       url: 'https://x.com/vite_js',
       label: 'X',
-      icon: <XIcon />
+      icon: <XIcon />,
     },
     {
       platform: 'discord',
       url: 'https://chat.vite.dev',
       label: 'Discord',
-      icon: <DiscordIcon />
+      icon: <DiscordIcon />,
     },
     {
       platform: 'github',
       url: 'https://github.com/vitejs/vite',
       label: 'GitHub',
-      icon: <GithubIcon />
-    }
+      icon: <GithubIcon />,
+    },
   ];
   const {
     'navbar-social': navBarSocial,
@@ -61,12 +61,10 @@ export const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className={socialIcon}>
-              {icon}
-            </span>
+            <span className={socialIcon}>{icon}</span>
           </Link>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
