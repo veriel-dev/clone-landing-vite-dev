@@ -14,29 +14,54 @@ export const FeatureCI = () => {
   const { isCardActive, startAnimation } = useCardAnimation(
     cardRef,
     () => {
+
+      timelineRef.current = gsap.timeline({
+        defaults: {
+          ease: 'power2.inOut'
+        }
+      });
+      // Create a proxy object for smoother animation
+      const animationProxy = {
+        glowProgress: 0
+      };
+
+
       setGlowPosition(0);
       setGlowVisible(false);
-      timelineRef.current = gsap.timeline();
-      timelineRef.current.to({ value: 0 }, {
-        duration: 1.5,
-        value: 1,
-        ease: 'power2.in',
-        onUpdate: () => {
-          setGlowPosition(1);
-        }
-      }, 0);
-      timelineRef.current.call(() => setGlowVisible(true), [], 0.2);
-      timelineRef.current.call(() => setGlowVisible(false), [], 1.1);
+      // Step 1: Animate the glow position with better control
+      timelineRef.current
+        .to(animationProxy, {
+          duration: 1.5,
+          glowProgress: 1,
+          ease: 'power2.in',
+          onUpdate: () => {
+            setGlowPosition(animationProxy.glowProgress);
+          }
+        }, 0)
+        // Step 2: Control glow visibility with precise timing
+        .call(() => setGlowVisible(true), [], 0.2)
+        .call(() => setGlowVisible(false), [], 1.1);
 
-      checkmarks.forEach((_, index) => {
-        timelineRef.current?.call(() => {
-          setCheckmarks(prev => {
-            const newCheckmarks = [...prev];
-            newCheckmarks[index] = true;
-            return newCheckmarks;
-          });
-        }, [], 1.3 + index * 0.2);
+      // Step 3: Create a separate sequence for checkmarks
+      // Using stagger for smoother animations
+      const checkmarkTimeline = gsap.timeline({
+        delay: 1.3
       });
+      checkmarks.forEach((_, index) => {
+        checkmarkTimeline.add(
+          gsap.timeline()
+            .call(() => {
+              setCheckmarks(prev => {
+                const newCheckmarks = [...prev];
+                newCheckmarks[index] = true;
+                return newCheckmarks;
+              });
+            }),
+          index * 0.2
+        );
+      });
+      timelineRef.current.add(checkmarkTimeline);
+
       return timelineRef.current;
     },
     { once: true },
