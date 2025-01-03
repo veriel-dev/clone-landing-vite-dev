@@ -252,21 +252,21 @@ export const useAnimationHeroDiagram = () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     timeline.set(
-      blueIndicator,
+      { blueIndicator: false },
       { blueIndicator: true, onUpdate: () => setBlueIndicator(true) },
       isMobile ? '>-2' : '>-0.2',
     );
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     timeline.set(
-      illuminateLogo,
+      { illuminateLogo: false },
       { illuminateLogo: true, onUpdate: () => setIlluminateLogo(true) },
       '<-0.3',
     );
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     timeline.set(
-      pinkIndicator,
+      { pinkIndicator: false },
       { pinkIndicator: true, onUpdate: () => setPinkIndicator(true) },
       '<+0.3',
     );
@@ -285,14 +285,14 @@ export const useAnimationHeroDiagram = () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       timeline.set(
-        blueIndicator,
+        { blueIndicator },
         { blueIndicator: false, onUpdate: () => setBlueIndicator(false) },
         '>-1',
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       timeline.set(
-        pinkIndicator,
+        { pinkIndicator },
         { pinkIndicator: true, onUpdate: () => setPinkIndicator(true) },
         '<',
       );

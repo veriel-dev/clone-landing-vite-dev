@@ -8,47 +8,78 @@ import '../../css/featureSection/featureOptimizedBuild.css';
 export const FeatureOptimizedBuild = () => {
   const [isBoltActive, setIsBoltActive] = useState(false);
 
-  const [nodes] = useState(
+  const [nodes, setNodes] = useState(
     Array.from({ length: 10 }, () => {
       return {
         position: 0,
         visible: false,
       };
-    }),
+    })
   );
 
   const cardRef = useSlideIn();
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
-  const subTimelineRef = useRef<gsap.core.Timeline | null>(null);
 
   const { startAnimation } = useCardAnimation(
     cardRef,
     () => {
       timelineRef.current = gsap.timeline();
-      // Animate each node with its own sub-timeline
-      nodes.forEach(node => {
-        subTimelineRef.current = gsap.timeline();
-        // First, make the node visible
-        subTimelineRef.current?.call(() => {
-          node.visible = true;
+      const nodePositions = nodes.map((node, index) => ({
+        id: index,
+        position: node.position,
+        visible: node.visible
+      }));
+
+      const proxy = nodePositions.map(node => ({
+        position: node.position
+      }));
+
+      nodePositions.forEach((node, index) => {
+        const subTimeline = gsap.timeline();
+        subTimeline.call(() => {
+          setNodes(prev =>
+            prev.map((n, i) =>
+              i === node.id ? { ...n, visible: true } : n
+            )
+          );
         });
-        // Make the node invisible near the end
-        subTimelineRef.current?.call(
+        subTimeline.to(proxy[index], {
+          position: node.position + 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          onUpdate: () => {
+            setNodes(prev =>
+              prev.map((n, i) =>
+                i === node.id
+                  ? {
+                    ...n,
+                    position: proxy[index].position
+                  }
+                  : n
+              )
+            );
+          }
+        });
+        // Ocultamos el nodo al final
+        subTimeline.call(
           () => {
-            node.visible = false;
+            setNodes(prev =>
+              prev.map((n, i) =>
+                i === node.id ? { ...n, visible: false } : n
+              )
+            );
           },
           [],
-          '-=0.6',
+          '-=0.6'
         );
-        // Add this sub-timeline to the main timeline at a random position
-        timelineRef.current?.add(subTimelineRef.current, Math.random());
+        timelineRef.current?.add(subTimeline, Math.random());
       });
-      // Animate in the bolt near the end
+      console.log(nodes)
       timelineRef.current.call(
         () => {
           setIsBoltActive(true);
         },
-        null,
+        [],
         '-=0.5',
       );
     },
@@ -81,8 +112,8 @@ export const FeatureOptimizedBuild = () => {
             path="M195 31.5L89.8055 30.377C76.1575 30.377 62.535 29.076 49.0906 26.4886L-21 13"
             position={nodes[0].position}
             visible={nodes[0].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path d="M195 50L69.295 47.754L-21 41.016" stroke="url(#ob-linear-gradient-left)" />
@@ -91,8 +122,8 @@ export const FeatureOptimizedBuild = () => {
             path="M195 50L69.295 47.754L-21 41.016"
             position={nodes[1].position}
             visible={nodes[1].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path d="M195 68.5L-21 69.5642" stroke="url(#ob-linear-gradient-left)" />
@@ -101,8 +132,8 @@ export const FeatureOptimizedBuild = () => {
             path="M195 68.5L-21 69.5642"
             position={nodes[2].position}
             visible={nodes[2].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path d="M195 87L69.2951 89.2463L-21 96.1614" stroke="url(#ob-linear-gradient-left)" />
@@ -111,8 +142,8 @@ export const FeatureOptimizedBuild = () => {
             path="M195 87L69.2951 89.2463L-21 96.1614"
             position={nodes[3].position}
             visible={nodes[3].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path
@@ -124,8 +155,8 @@ export const FeatureOptimizedBuild = () => {
             path="M195 105.5L89.8055 106.623C76.1575 106.623 62.535 107.924 49.0906 110.511L-21 124"
             position={nodes[4].position}
             visible={nodes[4].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <defs>
@@ -160,8 +191,8 @@ export const FeatureOptimizedBuild = () => {
             path="M0 93.5L105.194 94.623C118.843 94.623 132.465 95.924 145.909 98.5114L216 112"
             position={nodes[5].position}
             visible={nodes[5].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path d="M0 75L125.705 77.246L216 83.984" stroke="url(#ob-linear-gradient-right)" />
@@ -170,8 +201,8 @@ export const FeatureOptimizedBuild = () => {
             path="M0 75L125.705 77.246L216 83.984"
             position={nodes[6].position}
             visible={nodes[6].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path d="M4.65162e-08 56.5L216 55.4358" stroke="url(#ob-linear-gradient-right)" />
@@ -180,8 +211,8 @@ export const FeatureOptimizedBuild = () => {
             path="M4.65162e-08 56.5L216 55.4358"
             position={nodes[7].position}
             visible={nodes[7].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path
@@ -193,8 +224,8 @@ export const FeatureOptimizedBuild = () => {
             path="M4.00455e-07 38L125.705 35.7537L216 28.8386"
             position={nodes[8].position}
             visible={nodes[8].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <path
@@ -206,8 +237,8 @@ export const FeatureOptimizedBuild = () => {
             path="M8.0866e-07 19.5L105.194 18.377C118.843 18.377 132.465 17.076 145.909 14.4887L216 1"
             position={nodes[9].position}
             visible={nodes[9].visible}
-            dot-color={false}
-            glow-color="#FFE358"
+            dotColor={"#8000FF"}
+            glowColor={"#8000FF"}
           />
 
           <defs>

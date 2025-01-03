@@ -22,7 +22,6 @@ export default function Home() {
       >
         <FeatureInstantServerStart />
         <FeatureHMR />
-
         <FeatureRichFeatures />
         <FeatureOptimizedBuild />
       </FeatureSection>
