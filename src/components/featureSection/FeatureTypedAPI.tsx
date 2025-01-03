@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
 import { useCardAnimation, useSlideIn } from '@/hooks'
-import "./test.css"
+
+import "../../css/featureSection/featureTypedAPI.css"
 export const FeatureTypedAPI = () => {
   const cardRef = useSlideIn();
 

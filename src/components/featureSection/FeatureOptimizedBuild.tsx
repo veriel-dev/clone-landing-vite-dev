@@ -4,10 +4,11 @@ import gsap from "gsap"
 import { useCardAnimation, useSlideIn } from '@/hooks';
 import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
 
+import "../../css/featureSection/featureOptimizedBuild.css"
 export const FeatureOptimizedBuild = () => {
   const [isBoltActive, setIsBoltActive] = useState(false);
 
-  const [nodes, setNodes] = useState(Array.from({ length: 10 }, () => {
+  const [nodes] = useState(Array.from({ length: 10 }, () => {
     return {
       position: 0,
       visible: false
@@ -358,9 +359,9 @@ export const FeatureOptimizedBuild = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(79.4533 63.5007) rotate(81.9567) scale(108.196 88.8357)"
             >
-              <stop offset="0" stopColor="#FFEA83" />
-              <stop offset="0.0833333" stopColor="#FFDD35" />
-              <stop offset="1" stopColor="#FFA800" />
+              <stop offset="0" stopColor="#9D75B8" />
+              <stop offset="0.0833333" stopColor="#B96EFC" />
+              <stop offset="1" stopColor="#8000FF" />
             </radialGradient>
             <radialGradient
               id="paint1_radial_693_18989"
@@ -370,9 +371,9 @@ export const FeatureOptimizedBuild = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(79.4533 62.3511) rotate(80.2589) scale(89.4759 88.4248)"
             >
-              <stop offset="0" stopColor="#FFEA83" />
-              <stop offset="0.0833333" stopColor="#FFDD35" />
-              <stop offset="1" stopColor="#FFA800" />
+              <stop offset="0" stopColor="#9D75B8" />
+              <stop offset="0.0833333" stopColor="#B96EFC" />
+              <stop offset="1" stopColor="#8000FF" />
             </radialGradient>
             <linearGradient
               id="linear-mask"
@@ -382,9 +383,9 @@ export const FeatureOptimizedBuild = () => {
               y2="165.923"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stopColor="#FFEA83" />
-              <stop offset="0.0833333" stopColor="#FFDD35" />
-              <stop offset="1" stopColor="#FFA800" />
+              <stop offset="0" stopColor="#9D75B8" />
+              <stop offset="0.0833333" stopColor="#B96EFC" />
+              <stop offset="1" stopColor="#8000FF" />
             </linearGradient>
             <radialGradient
               id="radial-bolt-color"
@@ -394,10 +395,10 @@ export const FeatureOptimizedBuild = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(72.7835 62.9782) rotate(77.8103) scale(100.793 123.282)"
             >
-              <stop offset="0" stopColor="#FFEA83" />
-              <stop offset="0.0833333" stopColor="#FFDD35" />
-              <stop offset="1" stopColor="#FFA800" />
-            </radialGradient>
+              <stop offset="0" stopColor="#9D75B8" />
+              <stop offset="0.0833333" stopColor="#B96EFC" />
+              <stop offset="1" stopColor="#8000FF" />
+            </radialGradient> 
             <radialGradient
               id="radial-bolt-edge"
               cx="0"
@@ -406,9 +407,9 @@ export const FeatureOptimizedBuild = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(79.4533 62.3511) rotate(80.2589) scale(89.4759 88.4248)"
             >
-              <stop offset="0" stopColor="#FFDD35" />
-              <stop offset="1" stopColor="#FFA800" />
-            </radialGradient>
+              <stop offset="0" stopColor="#B96EFC" />
+              <stop offset="1" stopColor="#8000FF" />
+            </radialGradient> 
           </defs>
         </svg>
       </div>
@@ -418,183 +419,6 @@ export const FeatureOptimizedBuild = () => {
           Pre-configured Rollup build with multi-page and library mode support.
         </div>
       </div>
-      <style jsx>{`
-        .feature-card {
-          min-height: 370px;
-
-          @media (min-width: 768px) {
-            transform: translate3d(60px, 0, 0);
-          }
-        }
-
-        .feature__visualization {
-          .left-lines {
-            position: absolute;
-            top: 60px;
-            left: unset;
-            right: 50%;
-
-            @media (min-width: 455px) {
-              left: 0;
-              right: unset;
-            }
-
-            @media (min-width: 768px) {
-              left: unset;
-              right: 50%;
-            }
-
-            @media (min-width: 900px) {
-              left: 0;
-              right: unset;
-            }
-
-            @media (min-width: 1200px) {
-              left: unset;
-              right: 50%;
-            }
-          }
-
-          .right-lines {
-            position: absolute;
-            top: 71px;
-            right: unset;
-            left: 50%;
-
-            @media (min-width: 455px) {
-              right: 0;
-              left: unset;
-            }
-
-            @media (min-width: 768px) {
-              right: unset;
-              left: 50%;
-            }
-
-            @media (min-width: 900px) {
-              right: 0;
-              left: unset;
-            }
-
-            @media (min-width: 1200px) {
-              right: unset;
-              left: 50%;
-            }
-          }
-
-          .bolt {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translate3d(-50%, 0, 0);
-
-            .bolt__glow {
-              transition: opacity 0.3s ease;
-              will-change: opacity;
-              opacity: 0.6;
-            }
-
-            .bolt__color {
-              opacity: 0.03;
-            }
-
-            .bolt__edge {
-              opacity: 0.1;
-            }
-
-            .bolt__highlight {
-              opacity: 0;
-            }
-
-            &.active {
-              .bolt__color {
-                animation: bolt-color-entrance 0.5s ease forwards;
-              }
-
-              .bolt__edge {
-                animation: bolt-edge-entrance 0.5s ease forwards;
-              }
-
-              .bolt__glow {
-                opacity: 0.7;
-                transition: opacity 0.1s ease;
-              }
-
-              .bolt__highlight {
-                opacity: 0.6;
-                transition: opacity 0.1s ease;
-                transition-delay: 0.5s;
-              }
-            }
-          }
-        }
-
-        @keyframes bolt-edge-entrance {
-          0% {
-            opacity: 0;
-          }
-          2% {
-            opacity: 0.6;
-          }
-          30% {
-            opacity: 0.6;
-          }
-          31% {
-            opacity: 0.01;
-          }
-          35% {
-            opacity: 0.01;
-          }
-          36% {
-            opacity: 0.8;
-          }
-          80% {
-            opacity: 0.8;
-          }
-          80% {
-            opacity: 0.3;
-          }
-          82% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes bolt-color-entrance {
-          0% {
-            opacity: 0.03;
-          }
-          2% {
-            opacity: 0.4;
-          }
-          30% {
-            opacity: 0.4;
-          }
-          31% {
-            opacity: 0.01;
-          }
-          35% {
-            opacity: 0.01;
-          }
-          36% {
-            opacity: 0.45;
-          }
-          80% {
-            opacity: 0.45;
-          }
-          80% {
-            opacity: 0.3;
-          }
-          82% {
-            opacity: 0.5;
-          }
-          100% {
-            opacity: 0.9;
-          }
-        }
-      `}</style>
     </div>
   )
 }

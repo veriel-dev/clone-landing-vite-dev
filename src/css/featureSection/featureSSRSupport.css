@@ -6,20 +6,12 @@
   .feature__meta {
     max-width: calc(100%);
   }
-
-  /* Extend height on smaller devices, to make room for text */
   @media (max-width: 380px) {
     height: 400px;
   }
 }
 
 .feature__visualization {
-  margin-top: 10px;
-
-  svg {
-    width: calc(100% - 15px);
-    margin: 0 auto;
-  }
 
   .js-text {
     fill: #a3a3a3;

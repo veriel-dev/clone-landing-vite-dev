@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
 import { useCardAnimation, useSlideIn } from '@/hooks'
-import "./test2.css"
+
+import "../../css/featureSection/featureSSRSupport.css"
 export const FeatureSSRSupport = () => {
   const cardRef = useSlideIn(-100);
   const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
@@ -11,7 +12,7 @@ export const FeatureSSRSupport = () => {
     <div
       className="feature-card"
       id="ssr-support"
-      onMouseEnter={startAnimation}
+      onMouseOver={startAnimation}
       ref={cardRef}
     >
       <div className={`feature__visualization ${isCardActive ? 'active' : ''}`}>
@@ -65,7 +66,7 @@ export const FeatureSSRSupport = () => {
             />
           </g>
 
-          <text className="js-text" x="80" y="120">.JS</text>
+          <text className="js-text" x="80" y="120">.TS</text>
           <path
             className="connector"
             opacity="0.25"

@@ -1,7 +1,8 @@
 "use client"
 import { useCardAnimation, useSlideIn } from '@/hooks'
 import React from 'react'
-import "./FeatureFlexiblePlugins.css"
+
+import "../../css/featureSection/featureFlexiblePlugins.css"
 export const FeatureFlexiblePlugins = () => {
   const cardRef = useSlideIn(-100);
   const { isCardActive, startAnimation } = useCardAnimation(cardRef, () => {
@@ -130,7 +131,7 @@ export const FeatureFlexiblePlugins = () => {
                   fillOpacity="0.5"
                 />
               </g>
-              <g className="vite-chip" filter="url(#filter-chip-shadow)">
+              <g className="vite-chip__v" filter="url(#filter-chip-shadow)">
                 <g
                   className="vite-chip__highlight"
                   filter="url(#filter-vite-chip-highlight)"

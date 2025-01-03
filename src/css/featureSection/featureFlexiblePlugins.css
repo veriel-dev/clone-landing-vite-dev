@@ -4,7 +4,7 @@
   }
 
   .feature__meta {
-    max-width: 680px;
+    max-width: 680px !important;
   }
 
   /* Extend height on smaller devices, to make room for text */

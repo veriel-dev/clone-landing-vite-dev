@@ -1,4 +1,15 @@
-import { FeatureFlexiblePlugins, FeatureHMR, FeatureInstantServerStart, FeatureOptimizedBuild, FeatureRichFeatures, FeatureSection, FeatureSSRSupport, FeatureTypedAPI, HeroSection } from "@/components";
+import { 
+  FeatureHMR, 
+  FeatureInstantServerStart, 
+  FeatureOptimizedBuild, 
+  FeatureRichFeatures, 
+  FeatureSection, 
+  HeroSection, 
+  FeatureFlexiblePlugins,
+  FeatureTypedAPI,
+  FeatureSSRSupport,
+  FeatureCI
+} from "@/components";
 
 
 export default function Home() {
@@ -8,6 +19,7 @@ export default function Home() {
       <FeatureSection title="Redefining developer experience" type="blue" description="Vite makes web development simple again">
         <FeatureInstantServerStart />
         <FeatureHMR />
+      
         <FeatureRichFeatures />
         <FeatureOptimizedBuild />
       </FeatureSection>
@@ -15,7 +27,8 @@ export default function Home() {
         <FeatureFlexiblePlugins />
         <FeatureTypedAPI />
         <FeatureSSRSupport />
-      </FeatureSection>
+        <FeatureCI />
+      </FeatureSection> 
     </>
   );
 }
