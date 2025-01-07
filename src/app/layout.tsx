@@ -3,7 +3,12 @@ import '@/css/globals.css';
 import '@/css/vars.css';
 import '@/css/heroDiagram.css';
 import '@/css/featureSection.css';
-import { Header } from '@/components';
+import '@/css/frameworksCards.css';
+import '@/css/frameworksSection.css';
+import '@/css/communitySection.css';
+import '@/css/sponsorSection.css';
+import '@/css/getStartedSection.css';
+import { Footer, Header, ScrollToTop } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Vite | Next Generation Frontend Tooling',
@@ -42,7 +47,9 @@ export default function RootLayout({
               </div>
             </div>
           </div>
+          <Footer />
         </div>
+        <ScrollToTop />
       </body>
     </html>
   );

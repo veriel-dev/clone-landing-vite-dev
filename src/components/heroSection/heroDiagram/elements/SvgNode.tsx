@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useId, useRef, useState } from 'react';
 
-
 const GRADIENT_WIDTH = 30;
 export interface SvgNodeProps {
   path?: string;

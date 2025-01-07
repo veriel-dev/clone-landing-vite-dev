@@ -1,201 +1,200 @@
 :root {
-  --astro-c-white: #ffffff;
-  --astro-c-black: #000000;
-  --astro-c-neutral: var(--astro-c-black);
-  --astro-c-neutral-inverse: var(--astro-c-white);
+  --next-c-white: #ffffff;
+  --next-c-black: #000000;
+  --next-c-neutral: var(--next-c-black);
+  --next-c-neutral-inverse: var(--next-c-white);
 }
 :root {
-  --astro-nav-height: 64px;
-  --astro-nav-bg-color: var(--astro-c-bg);
-  --astro-nav-screen-bg-color: var(--astro-c-bg);
-  --astro-nav-logo-height: 24px;
+  --next-nav-height: 64px;
+  --next-nav-bg-color: var(--next-c-bg);
+  --next-nav-screen-bg-color: var(--next-c-bg);
+  --next-nav-logo-height: 24px;
 }
 .dark {
-  --astro-c-neutral: var(--astro-c-white);
-  --astro-c-neutral-inverse: var(--astro-c-black);
+  --next-c-neutral: var(--next-c-white);
+  --next-c-neutral-inverse: var(--next-c-black);
 }
 
 :root {
-  --astro-c-gray-1: #dddde3;
-  --astro-c-gray-2: #e4e4e9;
-  --astro-c-gray-3: #ebebef;
-  --astro-c-gray-soft: rgba(142, 150, 170, 0.14);
-  --astro-c-indigo-1: #a8b1ff;
-  --astro-c-indigo-2: #3a5ccc;
-  --astro-c-indigo-3: #5672cd;
-  --astro-c-indigo-soft: rgba(100, 108, 255, 0.14);
-  --astro-c-purple-1: #6f42c1;
-  --astro-c-purple-2: #7e4cc9;
-  --astro-c-purple-3: #8e5cd9;
-  --astro-c-purple-soft: rgba(159, 122, 234, 0.14);
-  --astro-c-green-1: #18794e;
-  --astro-c-green-2: #299764;
-  --astro-c-green-3: #30a46c;
-  --astro-c-green-soft: rgba(16, 185, 129, 0.14);
-  --astro-c-yellow-1: #915930;
-  --astro-c-yellow-2: #946300;
-  --astro-c-yellow-3: #9f6a00;
-  --astro-c-yellow-soft: rgba(234, 179, 8, 0.14);
-  --astro-c-red-1: #b8272c;
-  --astro-c-red-2: #d5393e;
-  --astro-c-red-3: #e0575b;
-  --astro-c-red-soft: rgba(244, 63, 94, 0.14);
-  --astro-c-sponsor: #db2777;
-}
-
-.dark {
-  --astro-c-gray-1: #515c67;
-  --astro-c-gray-2: #414853;
-  --astro-c-gray-3: #32363f;
-  --astro-c-gray-soft: rgba(101, 117, 133, 0.16);
-  --astro-c-indigo-1: #a8b1ff;
-  --astro-c-indigo-2: #5c73e7;
-  --astro-c-indigo-3: #3e63dd;
-  --astro-c-indigo-soft: rgba(100, 108, 255, 0.16);
-  --astro-c-purple-1: #c8abfa;
-  --astro-c-purple-2: #a879e6;
-  --astro-c-purple-3: #8e5cd9;
-  --astro-c-purple-soft: rgba(159, 122, 234, 0.16);
-  --astro-c-green-1: #3dd68c;
-  --astro-c-green-2: #30a46c;
-  --astro-c-green-3: #298459;
-  --astro-c-green-soft: rgba(16, 185, 129, 0.16);
-  --astro-c-yellow-1: #f9b44e;
-  --astro-c-yellow-2: #da8b17;
-  --astro-c-yellow-3: #a46a0a;
-  --astro-c-yellow-soft: rgba(234, 179, 8, 0.16);
-  --astro-c-red-1: #f66f81;
-  --astro-c-red-2: #f14158;
-  --astro-c-red-3: #b62a3c;
-  --astro-c-red-soft: rgba(244, 63, 94, 0.16);
-}
-
-:root {
-  --astro-c-bg: #ffffff;
-  --astro-c-bg-alt: #f6f6f7;
-  --astro-c-bg-elv: #ffffff;
-  --astro-c-bg-soft: #f6f6f7;
+  --next-c-gray-1: #dddde3;
+  --next-c-gray-2: #e4e4e9;
+  --next-c-gray-3: #ebebef;
+  --next-c-gray-soft: rgba(142, 150, 170, 0.14);
+  --next-c-indigo-1: #a8b1ff;
+  --next-c-indigo-2: #3a5ccc;
+  --next-c-indigo-3: #5672cd;
+  --next-c-indigo-soft: rgba(100, 108, 255, 0.14);
+  --next-c-purple-1: #6f42c1;
+  --next-c-purple-2: #7e4cc9;
+  --next-c-purple-3: #8e5cd9;
+  --next-c-purple-soft: rgba(159, 122, 234, 0.14);
+  --next-c-green-1: #18794e;
+  --next-c-green-2: #299764;
+  --next-c-green-3: #30a46c;
+  --next-c-green-soft: rgba(16, 185, 129, 0.14);
+  --next-c-yellow-1: #915930;
+  --next-c-yellow-2: #946300;
+  --next-c-yellow-3: #9f6a00;
+  --next-c-yellow-soft: rgba(234, 179, 8, 0.14);
+  --next-c-red-1: #b8272c;
+  --next-c-red-2: #d5393e;
+  --next-c-red-3: #e0575b;
+  --next-c-red-soft: rgba(244, 63, 94, 0.14);
+  --next-c-sponsor: #db2777;
 }
 
 .dark {
-  --astro-c-bg: #1b1b1f;
-  --astro-c-bg-alt: #161618;
-  --astro-c-bg-elv: #202127;
-  --astro-c-bg-soft: #202127;
+  --next-c-gray-1: #515c67;
+  --next-c-gray-2: #414853;
+  --next-c-gray-3: #32363f;
+  --next-c-gray-soft: rgba(101, 117, 133, 0.16);
+  --next-c-indigo-1: #a8b1ff;
+  --next-c-indigo-2: #5c73e7;
+  --next-c-indigo-3: #3e63dd;
+  --next-c-indigo-soft: rgba(100, 108, 255, 0.16);
+  --next-c-purple-1: #c8abfa;
+  --next-c-purple-2: #a879e6;
+  --next-c-purple-3: #8e5cd9;
+  --next-c-purple-soft: rgba(159, 122, 234, 0.16);
+  --next-c-green-1: #3dd68c;
+  --next-c-green-2: #30a46c;
+  --next-c-green-3: #298459;
+  --next-c-green-soft: rgba(16, 185, 129, 0.16);
+  --next-c-yellow-1: #f9b44e;
+  --next-c-yellow-2: #da8b17;
+  --next-c-yellow-3: #a46a0a;
+  --next-c-yellow-soft: rgba(234, 179, 8, 0.16);
+  --next-c-red-1: #f66f81;
+  --next-c-red-2: #f14158;
+  --next-c-red-3: #b62a3c;
+  --next-c-red-soft: rgba(244, 63, 94, 0.16);
 }
 
 :root {
-  --astro-c-border: #c2c2c4;
-  --astro-c-divider: #e2e2e3;
-  --astro-c-gutter: #e2e2e3;
+  --next-c-bg: #ffffff;
+  --next-c-bg-alt: #f6f6f7;
+  --next-c-bg-elv: #ffffff;
+  --next-c-bg-soft: #f6f6f7;
 }
 
 .dark {
-  --astro-c-border: #3c3f44;
-  --astro-c-divider: #2e2e32;
-  --astro-c-gutter: #000000;
+  --next-c-bg: #1b1b1f;
+  --next-c-bg-alt: #161618;
+  --next-c-bg-elv: #202127;
+  --next-c-bg-soft: #202127;
 }
 
 :root {
-  --astro-c-text-1: rgba(255, 255, 245, 0.86);
-  --astro-c-text-2: rgba(235, 235, 245, 0.6);
-  --astro-c-text-3: rgba(235, 235, 245, 0.38);
+  --next-c-border: #c2c2c4;
+  --next-c-divider: #e2e2e3;
+  --next-c-gutter: #e2e2e3;
+}
+
+.dark {
+  --next-c-border: #3c3f44;
+  --next-c-divider: #2e2e32;
+  --next-c-gutter: #000000;
 }
 
 :root {
-  --astro-c-default-1: var(--astro-c-gray-1);
-  --astro-c-default-2: var(--astro-c-gray-2);
-  --astro-c-default-3: var(--astro-c-gray-3);
-  --astro-c-default-soft: var(--astro-c-gray-soft);
-  --astro-c-brand-1: var(--astro-c-indigo-1);
-  --astro-c-brand-2: var(--astro-c-indigo-2);
-  --astro-c-brand-3: var(--astro-c-indigo-3);
-  --astro-c-brand-soft: var(--astro-c-indigo-soft);
-  --astro-c-brand: var(--astro-c-brand-1);
-  --astro-c-tip-1: var(--astro-c-brand-1);
-  --astro-c-tip-2: var(--astro-c-brand-2);
-  --astro-c-tip-3: var(--astro-c-brand-3);
-  --astro-c-tip-soft: var(--astro-c-brand-soft);
-  --astro-c-note-1: var(--astro-c-brand-1);
-  --astro-c-note-2: var(--astro-c-brand-2);
-  --astro-c-note-3: var(--astro-c-brand-3);
-  --astro-c-note-soft: var(--astro-c-brand-soft);
-  --astro-c-success-1: var(--astro-c-green-1);
-  --astro-c-success-2: var(--astro-c-green-2);
-  --astro-c-success-3: var(--astro-c-green-3);
-  --astro-c-success-soft: var(--astro-c-green-soft);
-  --astro-c-important-1: var(--astro-c-purple-1);
-  --astro-c-important-2: var(--astro-c-purple-2);
-  --astro-c-important-3: var(--astro-c-purple-3);
-  --astro-c-important-soft: var(--astro-c-purple-soft);
-  --astro-c-warning-1: var(--astro-c-yellow-1);
-  --astro-c-warning-2: var(--astro-c-yellow-2);
-  --astro-c-warning-3: var(--astro-c-yellow-3);
-  --astro-c-warning-soft: var(--astro-c-yellow-soft);
-  --astro-c-danger-1: var(--astro-c-red-1);
-  --astro-c-danger-2: var(--astro-c-red-2);
-  --astro-c-danger-3: var(--astro-c-red-3);
-  --astro-c-danger-soft: var(--astro-c-red-soft);
-  --astro-c-caution-1: var(--astro-c-red-1);
-  --astro-c-caution-2: var(--astro-c-red-2);
-  --astro-c-caution-3: var(--astro-c-red-3);
-  --astro-c-caution-soft: var(--astro-c-red-soft);
-
-  --astro-c-brand: #646cff;
-  --astro-c-brand-light: #747bff;
-  --astro-c-brand-lighter: #9499ff;
-  --astro-c-brand-lightest: #bcc0ff;
-  --astro-c-brand-dark: #535bf2;
-  --astro-c-brand-darker: #454ce1;
-  --astro-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --next-c-text-1: rgba(255, 255, 245, 0.86);
+  --next-c-text-2: rgba(235, 235, 245, 0.6);
+  --next-c-text-3: rgba(235, 235, 245, 0.38);
 }
 
 :root {
-  --astro-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --astro-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
-  --astro-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
-  --astro-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
-  --astro-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+  --next-c-default-1: var(--next-c-gray-1);
+  --next-c-default-2: var(--next-c-gray-2);
+  --next-c-default-3: var(--next-c-gray-3);
+  --next-c-default-soft: var(--next-c-gray-soft);
+  --next-c-brand-1: var(--next-c-indigo-1);
+  --next-c-brand-2: var(--next-c-indigo-2);
+  --next-c-brand-3: var(--next-c-indigo-3);
+  --next-c-brand-soft: var(--next-c-indigo-soft);
+  --next-c-brand: var(--next-c-brand-1);
+  --next-c-tip-1: var(--next-c-brand-1);
+  --next-c-tip-2: var(--next-c-brand-2);
+  --next-c-tip-3: var(--next-c-brand-3);
+  --next-c-tip-soft: var(--next-c-brand-soft);
+  --next-c-note-1: var(--next-c-brand-1);
+  --next-c-note-2: var(--next-c-brand-2);
+  --next-c-note-3: var(--next-c-brand-3);
+  --next-c-note-soft: var(--next-c-brand-soft);
+  --next-c-success-1: var(--next-c-green-1);
+  --next-c-success-2: var(--next-c-green-2);
+  --next-c-success-3: var(--next-c-green-3);
+  --next-c-success-soft: var(--next-c-green-soft);
+  --next-c-important-1: var(--next-c-purple-1);
+  --next-c-important-2: var(--next-c-purple-2);
+  --next-c-important-3: var(--next-c-purple-3);
+  --next-c-important-soft: var(--next-c-purple-soft);
+  --next-c-warning-1: var(--next-c-yellow-1);
+  --next-c-warning-2: var(--next-c-yellow-2);
+  --next-c-warning-3: var(--next-c-yellow-3);
+  --next-c-warning-soft: var(--next-c-yellow-soft);
+  --next-c-danger-1: var(--next-c-red-1);
+  --next-c-danger-2: var(--next-c-red-2);
+  --next-c-danger-3: var(--next-c-red-3);
+  --next-c-danger-soft: var(--next-c-red-soft);
+  --next-c-caution-1: var(--next-c-red-1);
+  --next-c-caution-2: var(--next-c-red-2);
+  --next-c-caution-3: var(--next-c-red-3);
+  --next-c-caution-soft: var(--next-c-red-soft);
+
+  --next-c-brand: #646cff;
+  --next-c-brand-light: #747bff;
+  --next-c-brand-lighter: #9499ff;
+  --next-c-brand-lightest: #bcc0ff;
+  --next-c-brand-dark: #535bf2;
+  --next-c-brand-darker: #454ce1;
+  --next-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+:root {
+  --next-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --next-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --next-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --next-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --next-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 :root {
-  --astro-z-index-footer: 10;
-  --astro-z-index-local-nav: 20;
-  --astro-z-index-nav: 30;
-  --astro-z-index-layout-top: 40;
-  --astro-z-index-backdrop: 50;
-  --astro-z-index-sidebar: 60;
+  --next-z-index-footer: 10;
+  --next-z-index-local-nav: 20;
+  --next-z-index-nav: 30;
+  --next-z-index-layout-top: 40;
+  --next-z-index-backdrop: 50;
+  --next-z-index-sidebar: 60;
 }
 :root {
-  --astro-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  --next-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-optical-sizing: auto;
 }
 
 :root:where(:lang(zh)) {
-  --astro-font-family-base: 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, sans-serif,
+  --next-font-family-base: 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @media (min-width: 960px) {
   :root {
-    --astro-z-index-sidebar: 25;
+    --next-z-index-sidebar: 25;
   }
 }
 
 :root {
-  --astro-layout-max-width: 1440px;
+  --next-layout-max-width: 1440px;
 }
 
 :root {
-  --astro-header-anchor-symbol: '#';
+  --next-header-anchor-symbol: '#';
 }
 :root {
-  --docsearch-primary-color: var(--astro-c-brand);
+  --docsearch-primary-color: var(--next-c-brand);
   --docsearch-container-background: rgba(0, 0, 0, 0.7);
   --transition-color: color 0.5s;
   --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' strokeWidth='1.6' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' d='m14.386 14.386 4.088 4.088-4.088-4.088A7.533 7.533 0 1 1 3.733 3.733a7.533 7.533 0 0 1 10.653 10.653z'/%3E%3C/svg%3E");
 }
-
 
 /* DocSearch Theme Variables */
 :root [class*='doc-search'] {
@@ -205,15 +204,15 @@
   --docsearch-hit-background: var(--docsearch-hit-background);
   --docsearch-hit-color: var(--docsearch-hit-color);
   --docsearch-hit-shadow: var(--docsearch-hit-shadow);
-  --docsearch-primary-color: var(--astro-c-brand-1);
+  --docsearch-primary-color: var(--next-c-brand-1);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-text-color: var(--astro-c-text-1);
-  --docsearch-muted-color: var(--astro-c-text-2);
+  --docsearch-text-color: var(--next-c-text-1);
+  --docsearch-muted-color: var(--next-c-text-2);
   --docsearch-searchbox-shadow: none;
   --docsearch-searchbox-background: transparent;
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
-  --docsearch-modal-background: var(--astro-c-bg-soft);
-  --docsearch-footer-background: var(--astro-c-bg);
+  --docsearch-modal-background: var(--next-c-bg-soft);
+  --docsearch-footer-background: var(--next-c-bg);
 }

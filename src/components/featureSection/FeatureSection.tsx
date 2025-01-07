@@ -27,43 +27,15 @@ export const FeatureSection = ({
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
-    // Create the timeline for animations
-    /* 
-      - timelineRef.current: Guarada la referencia de la timeline en un useRef, lo que permite acceder y controlar la timeline en cualquier parte del componente
-      - gsap.timeline(): Crea una nueva timeline de GSAP ccon las sigueinte configuraciones:
-        - scrollTrigger: Configura cuando se dispara la animación
-          - trigger: `#feature_section_${type}` - Elemento que dispara la animación
-          - start: 'top 80%' - Posición en la que se activa la animación. 'top 80%' indica que la animación se activa cuando el 80% superior del elemento está en la parte superior de la ventana
-          - once: true - La animación se ejecuta solo una vez
-    */
-    timelineRef.current = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: `#feature_section_${type}`,
         start: 'top 80%',
         once: true,
       },
     });
-    // Start animation
-    /* 
-      call(() => setAnimationVisible(true), [], 0)
-      - Llama inmediatamente a la función setAnimationVisible(true)
-      - El [] vacío significa que no se pasan argumentos a la función
-      - El 0 al final indica que esto ocurre al inicio de la timeline (posición 0)
-      
-      .to({ value: 0 }, {...}, 0)
-      - Comienza con un objeto que tiene value: 0
-      - Lo anima hasta value: 0.55 (55%)
-      - Duración de 2 segundos
-      - Usa ease: 'expo.out' para una aceleración exponencial que empieza rápido y termina suave
-      - El 0 final indica que esta animación también comienza al inicio de la timeline
-      
-      onUpdate: function () { setAnimationPercentage(this.targets()[0].value) }
-      - Durante la animación, en cada frame, actualiza un estado de React con el valor actual
-      - this.targets()[0] se refiere al objeto que se está animando
-      - Probablemente se usa para mostrar un contador o progreso animado que va de 0% a 55%
-    */
     timelineRef.current
-      .call(() => setAnimationVisible(true), [], 0)
+      ?.call(() => setAnimationVisible(true), [], 0)
       .to(
         { value: 0 },
         {
@@ -79,7 +51,8 @@ export const FeatureSection = ({
     // Cleanup
     return () => {
       if (timelineRef.current) {
-        timelineRef.current.kill();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        timelineRef.current?.kill();
       }
     };
   }, [type]);

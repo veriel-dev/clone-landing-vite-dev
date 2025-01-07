@@ -7,14 +7,15 @@ import { SvgNode } from '../heroSection/heroDiagram/elements/SvgNode';
 
 export const FeatureCI = () => {
   const [glowPosition, setGlowPosition] = useState(0);
-  const [glowVisible, setGlowVisible] = useState(true);
-  const [checkmarks, setCheckmarks] = useState<Array<boolean>>(() => Array.from({ length: 13 }, () => false));
+  const [glowVisible] = useState(true);
+  const [checkmarks, setCheckmarks] = useState<Array<boolean>>(() =>
+    Array.from({ length: 13 }, () => false),
+  );
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const cardRef = useSlideIn();
   const { isCardActive, startAnimation } = useCardAnimation(
     cardRef,
     () => {
-
       timelineRef.current = gsap.timeline();
 
       const glowProxy = { value: 0 };
@@ -27,9 +28,9 @@ export const FeatureCI = () => {
           ease: 'power2.in',
           onUpdate: () => {
             setGlowPosition(glowProxy.value);
-          }
+          },
         },
-        0
+        0,
       );
       checkmarks.forEach((_, index) => {
         timelineRef.current?.call(
@@ -41,11 +42,11 @@ export const FeatureCI = () => {
             });
           },
           [],
-          1.3 + index * 0.2
+          1.3 + index * 0.2,
         );
       });
     },
-    { once: true }
+    { once: true },
   );
   useEffect(() => {
     return () => {
@@ -95,8 +96,6 @@ export const FeatureCI = () => {
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
-                // className={`checkmark ${checkmarks[i]?.current ? 'active' : ''}`}
-                // className={`checkmark active`}
                 className={`checkmark ${checkmarks[i] ? 'active' : ''}`}
                 width="52"
                 height="52"
@@ -225,7 +224,7 @@ export const FeatureCI = () => {
               path="M719.001 125.219L496.078 68.7439C484.449 65.5528 477.106 59.0377 477.106 51.9119V20.323V1"
               position={glowPosition}
               visible={glowVisible}
-              dotColor={"#13B35"}
+              dotColor={'#13B35'}
               glowColor="#13B351"
             />
             <SvgNode

@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   padding: 0 12px;
-  height: var(--astro-nav-height);
-  color: var(--astro-c-text-1);
+  height: var(--next-nav-height);
+  color: var(--next-c-text-1);
   transition: color 0.5s;
 }
 
@@ -24,10 +24,10 @@
 .navBarTranslations .text {
   display: flex;
   align-items: center;
-  line-height: var(--astro-nav-height);
+  line-height: var(--next-nav-height);
   font-size: 14px;
   font-weight: 500;
-  color: var(--astro-c-text-1);
+  color: var(--next-c-text-1);
   transition: color 0.25s;
 }
 
@@ -54,12 +54,12 @@
   margin-left: 8px;
   width: 1px;
   height: 24px;
-  background-color: var(--astro-c-divider);
+  background-color: var(--next-c-divider);
   content: '';
 }
 .menu {
   position: absolute;
-  top: calc(var(--astro-nav-height) / 2 + 20px);
+  top: calc(var(--next-nav-height) / 2 + 20px);
   right: 0;
   opacity: 0;
   visibility: hidden;

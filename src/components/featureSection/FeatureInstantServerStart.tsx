@@ -28,8 +28,8 @@ export const FeatureInstantServerStart = () => {
         ease: 'power2.out',
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // Handle Enter key press
   useEffect(() => {
     const handleEnterPress = (event: KeyboardEvent) => {
       if (event.key === 'Enter') {
@@ -40,6 +40,7 @@ export const FeatureInstantServerStart = () => {
 
     window.addEventListener('keydown', handleEnterPress);
     return () => window.removeEventListener('keydown', handleEnterPress);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

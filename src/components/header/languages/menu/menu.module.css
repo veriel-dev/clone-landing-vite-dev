@@ -5,7 +5,7 @@
   line-height: 32px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--astro-c-text-1);
+  color: var(--next-c-text-1);
   white-space: nowrap;
   transition:
     background-color 0.25s,
@@ -13,8 +13,8 @@
 }
 
 .menu-link-lang:hover {
-  color: var(--astro-c-brand-1);
-  background-color: var(--astro-c-default-soft);
+  color: var(--next-c-brand-1);
+  background-color: var(--next-c-default-soft);
 }
 
 .menu-link-lang::after {
@@ -26,7 +26,7 @@
   width: 1rem;
   height: 1rem;
   background-color: currentColor; /* Cambiado de background a background-color */
-  color: var(--astro-c-text-3);
+  color: var(--next-c-text-3);
   flex-shrink: 0;
   --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z'/%3E%3C/svg%3E");
   -webkit-mask: var(--icon) no-repeat;
@@ -39,11 +39,11 @@
   border-radius: 12px;
   padding: 12px;
   min-width: 128px;
-  border: 1px solid var(--astro-c-divider);
-  background-color: var(--astro-c-bg-elv);
-  box-shadow: var(--astro-shadow-3);
+  border: 1px solid var(--next-c-divider);
+  background-color: var(--next-c-bg-elv);
+  box-shadow: var(--next-shadow-3);
   transition: background-color 0.5s;
-  max-height: calc(100vh - var(--astro-nav-height));
+  max-height: calc(100vh - var(--next-nav-height));
   overflow-y: auto;
 }
 .VPMenu .items .title {
@@ -51,5 +51,5 @@
   line-height: 32px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--astro-c-text-1);
+  color: var(--next-c-text-1);
 }

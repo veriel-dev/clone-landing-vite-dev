@@ -5,14 +5,14 @@
   position: relative;
   top: 0;
   left: 0;
-  z-index: var(--astro-z-index-nav, 100);
+  z-index: var(--next-z-index-nav, 100);
   width: 100%;
   transition: background-color 0.5s;
 }
 
 .header .navBar {
   position: relative;
-  height: var(--astro-nav-height, 4rem);
+  height: var(--next-nav-height, 4rem);
   white-space: nowrap;
   transition: var(--header-transition-background-color);
 }
@@ -24,8 +24,8 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: calc(var(--astro-layout-max-width) - 64px);
-  height: var(--astro-nav-height, 4rem);
+  max-width: calc(var(--next-layout-max-width) - 64px);
+  height: var(--next-nav-height, 4rem);
 }
 .header .navBar .wrapper *:not(.wrapper *) {
   transition: none;
@@ -58,5 +58,5 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: var(--astro-nav-height);
+  height: var(--next-nav-height);
 }

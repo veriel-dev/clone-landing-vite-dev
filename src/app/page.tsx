@@ -9,6 +9,10 @@ import {
   FeatureTypedAPI,
   FeatureSSRSupport,
   FeatureCI,
+  FrameworksSection,
+  CommnunitySection,
+  SponsorSection,
+  GetStartedSection,
 } from '@/components';
 
 export default function Home() {
@@ -35,6 +39,10 @@ export default function Home() {
         <FeatureSSRSupport />
         <FeatureCI />
       </FeatureSection>
+      <FrameworksSection />
+      <CommnunitySection />
+      <SponsorSection />
+      <GetStartedSection />
     </>
   );
 }

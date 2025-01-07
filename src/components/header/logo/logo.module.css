@@ -1,7 +1,7 @@
 .navBarTitle {
   --header-transition-background-color: transition: background-color 0.5s;
   flex-shrink: 0;
-  height: calc(var(--astro-nav-height));
+  height: calc(var(--next-nav-height));
   transition: var(--heeder-transition-background-color);
 }
 
@@ -10,15 +10,15 @@
   align-items: center;
   justify-content: 1px solid transparent;
   width: 100%;
-  height: var(--astro-nav-height, 4rem);
+  height: var(--next-nav-height, 4rem);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--astro-c-text-1);
+  color: var(--next-c-text-1);
   transition: opacity 0.25s;
 }
 .navBarTitle .title .logo {
   margin-right: 5px;
-  height: var(--astro-nav-logo-height);
+  height: var(--next-nav-logo-height);
 }
 
 @media (min-width: 960px) {

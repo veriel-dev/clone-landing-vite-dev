@@ -15,7 +15,6 @@ export const SvgInput = ({ inputLines }: InputLinesProps) => {
       fill="none"
       className="input-lines"
     >
-      {/* Input Lines */}
       {inputLines.map(inputLine => (
         <g key={inputLine.path}>
           <path

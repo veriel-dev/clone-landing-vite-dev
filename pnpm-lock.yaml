@@ -7,12 +7,6 @@ settings:
 importers:
   .:
     dependencies:
-      format:
-        specifier: prettier --write "src/**/*.ts"
-        version: link:prettier --write "src/**/*.ts"
-      format:check:
-        specifier: prettier --check "src/**/*.ts"
-        version: link:prettier --check "src/**/*.ts"
       gsap:
         specifier: ^3.12.5
         version: 3.12.5

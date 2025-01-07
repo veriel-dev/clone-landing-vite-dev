@@ -48,15 +48,14 @@ export const FeatureOptimizedBuild = () => {
               prev.map((n, i) =>
                 i === node.id
                   ? {
-                    ...n,
-                    position: proxy[index].position,
-                  }
+                      ...n,
+                      position: proxy[index].position,
+                    }
                   : n,
               ),
             );
           },
         });
-        // Ocultamos el nodo al final
         subTimeline.call(
           () => {
             setNodes(prev => prev.map((n, i) => (i === node.id ? { ...n, visible: false } : n)));
@@ -85,7 +84,6 @@ export const FeatureOptimizedBuild = () => {
       ref={cardRef}
     >
       <div className="feature__visualization">
-        {/* Left-side lines/nodes*/}
         <svg
           className="left-lines"
           width="195"

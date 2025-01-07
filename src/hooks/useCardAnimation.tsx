@@ -60,16 +60,6 @@ export const useCardAnimation = (
   useEffect(() => {
     if (typeof element === 'string') elementRef.current = document.querySelector(element);
 
-    // Set up ScrollTrigger for mobile devices
-    /* 
-      - window.innerWidth < 768 - Comprueba si el ancho de la ventana es menor a 768 píxeles, lo que típicamente indica un dispositivo móvil o tablet
-      - elementRef.current - Verifica que existe una referencia válida al elemento del DOM
-      - ScrollTrigger.create() - Crea una nueva instancia de ScrollTrigger con la siguiente configuración:
-        - trigger: elementRef.current - Elemento que dispara la animación cuando es visible 
-        - start: 'top 60%' - Posición en la que se activa la animación. 'top 60%' indica que la animación se activa cuando el 60% superior del elemento está en la parte superior de la ventana
-        - onEnter: startAnimation - Función que se ejecuta cuando el elemento es visible en la ventana
-      - scrollTriggerRef.current - Guarda la instancia de ScrollTrigger para limpiarla más tarde
-    */
     if (window.innerWidth < 768 && elementRef.current) {
       scrollTriggerRef.current = ScrollTrigger.create({
         trigger: elementRef.current,

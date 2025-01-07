@@ -7,13 +7,13 @@ export const NavBar = () => {
       <span id="main-nav-aria-label" className="visually-hidden">
         Main Navigation{' '}
       </span>
-      <Link className={styles.navBarMenuLink} href="/guide/">
+      <Link className={styles.navBarMenuLink} href="#guide/">
         Guide
       </Link>
-      <Link className={styles.navBarMenuLink} href="/config/">
+      <Link className={styles.navBarMenuLink} href="#config/">
         Config
       </Link>
-      <Link className={styles.navBarMenuLink} href="/plugins/">
+      <Link className={styles.navBarMenuLink} href="#plugins/">
         Plugins
       </Link>
       <div className="VPFlyout VPNavBarMenuGroup">

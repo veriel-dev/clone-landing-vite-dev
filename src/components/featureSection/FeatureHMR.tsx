@@ -25,7 +25,6 @@ export const FeatureHMR = () => {
   return (
     <div ref={cardRef} className="feature-card" id="hmr-card" onMouseOver={startAnimation}>
       <div className="feature__visualization">
-        {/* Terminal / IDE (left-side) */}
         <div className={`terminal ${terminalActive ? 'active' : ''}`}>
           <svg
             className="terminal__line-numbers"
